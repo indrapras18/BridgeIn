@@ -175,6 +175,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="#testimonials" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all font-medium">
+                            Testimonials
+                        </a>
+                    </li>
+                    <li>
                         <a href="#contact" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all font-medium">
                             Contact
                         </a>
