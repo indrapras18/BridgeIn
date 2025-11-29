@@ -138,7 +138,7 @@
                     </li>
                 </ul>
 
-                <!-- CTA Button
+                <!-- CTA Button -->
                 <div class="hidden md:flex items-center space-x-4">
                     <a href="#contact" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center space-x-2">
                         <span>Get Started</span>
@@ -146,7 +146,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </a>
-                </div> -->
+                </div>
 
                 <!-- Mobile Menu Button -->
                 <button class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none" id="mobile-menu-button">
