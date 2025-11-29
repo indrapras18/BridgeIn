@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BridgeIn - Digital Transformation Partner</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         @font-face {
@@ -276,14 +279,15 @@
             </div>
 
             <!-- Scroll Down Indicator -->
-            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 opacity-0 animate-bounce-fade" style="animation-delay: 2.5s;">
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 animate-bounce-fade" style="animation-delay: 2.5s;">
                 <div class="flex flex-col items-center space-y-2">
                     <span class="text-sm font-medium opacity-80">Scroll Down</span>
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 26 26">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                     </svg>
                 </div>
             </div>
+
         </div>
 
         <style>
@@ -340,7 +344,7 @@
         <div class="absolute bottom-20 left-10 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
 
         <div class="container mx-auto relative z-10">
-            <div class="mb-12">
+            <div class="mb-12" data-aos="fade-down">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Our Services</h2>
                 <p class="text-center text-gray-600 max-w-2xl mx-auto">
                     Use a few services or use them all, let the BridgeIn team take care of all of your technology needs.
@@ -348,8 +352,10 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
                 <!-- Website Development -->
-                <div class="group bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                <div class="group bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="100">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
                     <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
 
@@ -378,7 +384,8 @@
                 </div>
 
                 <!-- Mobile Development -->
-                <div class="group bg-gradient-to-br from-purple-600 to-purple-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                <div class="group bg-gradient-to-br from-purple-600 to-purple-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
                     <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
 
@@ -407,7 +414,8 @@
                 </div>
 
                 <!-- E-Commerce -->
-                <div class="group bg-gradient-to-br from-cyan-600 to-cyan-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                <div class="group bg-gradient-to-br from-cyan-600 to-cyan-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
                     <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
 
@@ -436,7 +444,8 @@
                 </div>
 
                 <!-- Point of Sales -->
-                <div class="group bg-gradient-to-br from-emerald-600 to-emerald-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-emerald-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                <div class="group bg-gradient-to-br from-emerald-600 to-emerald-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-emerald-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="400">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
                     <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
 
@@ -466,7 +475,8 @@
                 </div>
 
                 <!-- Digital Marketing -->
-                <div class="group bg-gradient-to-br from-pink-600 to-rose-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-pink-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                <div class="group bg-gradient-to-br from-pink-600 to-rose-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-pink-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="500">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
                     <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
 
@@ -496,7 +506,8 @@
                 </div>
 
                 <!-- Enterprise System -->
-                <div class="group bg-gradient-to-br from-indigo-600 to-indigo-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-indigo-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden">
+                <div class="group bg-gradient-to-br from-indigo-600 to-indigo-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-indigo-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="600">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
                     <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
 
@@ -524,6 +535,7 @@
                         </ul>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -826,7 +838,6 @@
             <!-- Header -->
             <div class="text-center mb-16">
                 <div class="inline-block mb-4">
-                    <!-- <span class="bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wide">Testimonials</span> -->
                 </div>
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">What Our Clients Say</h2>
                 <p class="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -1263,6 +1274,11 @@
     });
 
     updateItemsPerView();
+    AOS.init({
+        duration: 900,
+        once: true,
+        easing: 'ease-out-quart'
+    });
 </script>
 
 </html>
