@@ -90,14 +90,11 @@
         <div class="container mx-auto px-6">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
-                <a href="#" class="flex items-center space-x-3 group cursor-pointer">
+                <a href="#" class="flex items-center group cursor-pointer">
                     <div class="relative">
-                        <img src="asset/logo.png" alt="BridgeIn Logo" class="h-10 w-auto transform group-hover:scale-110 transition-transform duration-300">
+                        <img src="asset/logo-crop.png" alt="BridgeIn Logo" class="h-auto w-20 transform group-hover:scale-110 transition-transform duration-300">
                         <div class="absolute inset-0 bg-blue-500 rounded-xl blur-md opacity-0 group-hover:opacity-30 transition-opacity"></div>
                     </div>
-                    <span class="text-2xl font-bold bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent">
-                        BridgeIn.
-                    </span>
                 </a>
 
                 <!-- Desktop Menu -->
@@ -190,62 +187,148 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative text-white py-20 px-6 overflow-hidden">
+    <section class="relative text-white py-32 px-6 overflow-hidden min-h-screen flex items-center">
         <!-- Background Image -->
         <div class="absolute inset-0">
-            <!-- Gambar Background -->
-            <img src="asset/hero.jpeg" alt="" class="w-full h-full object-cover">
-
-            <!-- Overlay untuk memastikan text tetap terbaca -->
-            <div class="absolute inset-0 bg-blue-900/40"></div>
+            <img src="asset/hero.jpeg" alt="Hero Background" class="w-full h-full object-cover">
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-blue-800/60 to-purple-900/70"></div>
+            <!-- Animated Overlay Pattern -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+            </div>
         </div>
 
         <div class="container mx-auto text-center relative z-10">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                Build Better, Faster, and Smarter
-            </h1>
-            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-90">
-                BridgeIn is your trusted partner in Digital Transformation.<br>
-                We deliver cutting-edge software solutions and IT consulting services to<br>
-                help businesses thrive in the digital era.
-            </p>
+            <!-- Main Heading with Animation -->
+            <div class="space-y-4 mb-8">
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                    <span class="block opacity-0 animate-fade-in-up" style="animation-delay: 0.2s;">Build Better,</span>
+                    <span class="block opacity-0 animate-fade-in-up bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text text-transparent" style="animation-delay: 0.5s;">Faster, and Smarter</span>
+                </h1>
+            </div>
 
-            <!-- Values Section -->
-            <div class="mt-16 bg-white/10 backdrop-blur-sm rounded-3xl p-8 max-w-4xl mx-auto border border-white/20">
-                <h3 class="text-2xl font-bold mb-8">Our Values</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="flex flex-col items-center">
-                        <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-3">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
+            <!-- Description with Animation -->
+            <div class="opacity-0 animate-fade-in-up" style="animation-delay: 0.8s;">
+                <p class="text-lg md:text-2xl mb-4 max-w-4xl mx-auto font-light leading-relaxed">
+                    BridgeIn is your trusted partner in <span class="font-semibold text-blue-300">Digital Transformation</span>
+                </p>
+                <p class="text-base md:text-lg mb-8 max-w-3xl mx-auto opacity-90 leading-relaxed">
+                    We deliver cutting-edge software solutions and IT consulting services to help businesses thrive in the digital era
+                </p>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-20 opacity-0 animate-fade-in-up" style="animation-delay: 1.1s;">
+                <a href="#contact" class="group bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
+                    <span>Get Started</span>
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                </a>
+                <a href="#portfolio" class="group bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 hover:border-white/50 transition-all duration-300 flex items-center justify-center space-x-2">
+                    <span>View Portfolio</span>
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Values Section with Staggered Animation -->
+            <div class="mt-16 opacity-0 animate-fade-in-up" style="animation-delay: 1.4s;">
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-10 max-w-5xl mx-auto border border-white/20 shadow-2xl">
+                    <h3 class="text-3xl font-bold mb-10 opacity-0 animate-fade-in-up" style="animation-delay: 1.6s;">Our Core Values</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Innovation -->
+                        <div class="flex flex-col items-center group opacity-0 animate-fade-in-up" style="animation-delay: 1.8s;">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-bold text-xl mb-2">Innovation</h4>
+                            <p class="text-sm opacity-80 text-center leading-relaxed">Pushing boundaries with creative solutions</p>
                         </div>
-                        <h4 class="font-semibold text-lg mb-1">Innovation</h4>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-3">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
+
+                        <!-- Trust & Reliability -->
+                        <div class="flex flex-col items-center group opacity-0 animate-fade-in-up" style="animation-delay: 2s;">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <h4 class="font-bold text-xl mb-2">Trust & Reliability</h4>
+                            <p class="text-sm opacity-80 text-center leading-relaxed">Building lasting partnerships through excellence</p>
                         </div>
-                        <h4 class="font-semibold text-lg mb-1">Trust & Reliability</h4>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-3">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
-                            </svg>
+
+                        <!-- Modern Solutions -->
+                        <div class="flex flex-col items-center group opacity-0 animate-fade-in-up" style="animation-delay: 2.2s;">
+                            <div class="w-16 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-bold text-xl mb-2">Modern Solutions</h4>
+                            <p class="text-sm opacity-80 text-center leading-relaxed">Leveraging cutting-edge technology</p>
                         </div>
-                        <h4 class="font-semibold text-lg mb-1">Modern Solutions</h4>
                     </div>
+                </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 opacity-0 animate-bounce-fade" style="animation-delay: 2.5s;">
+                <div class="flex flex-col items-center space-y-2">
+                    <span class="text-sm font-medium opacity-80">Scroll Down</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
                 </div>
             </div>
         </div>
 
         <style>
-            /* Optional: jika ingin parallax effect */
-            .parallax-bg {
-                background-attachment: fixed;
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes bounceFade {
+
+                0%,
+                100% {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+
+                50% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .animate-fade-in-up {
+                animation: fadeInUp 0.8s ease-out forwards;
+            }
+
+            .animate-bounce-fade {
+                animation: bounceFade 2s ease-in-out infinite;
+            }
+
+            /* Ensure animations play on page load */
+            @media (prefers-reduced-motion: reduce) {
+
+                .animate-fade-in-up,
+                .animate-bounce-fade {
+                    animation: none;
+                    opacity: 1;
+                }
             }
         </style>
     </section>
@@ -520,8 +603,7 @@
             </div>
         </div>
     </section>
-
-
+    <!-- portfolio -->
     <section id="portfolio" class="py-24 px-6 relative overflow-hidden">
         <!-- Decorative Elements -->
         <div class="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
@@ -539,19 +621,19 @@
                 <!-- Carousel Container -->
                 <div class="overflow-hidden rounded-3xl">
                     <div id="portfolioCarousel" class="flex transition-transform duration-700 ease-out">
-                        <!-- Slide 1 -->
+                        <!-- Slide 1 - ShopFlow Pro -->
                         <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-4">
                             <div class="card-hover bg-white rounded-3xl shadow-2xl overflow-hidden shine group">
-                                <div class="relative h-64 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 overflow-hidden">
-                                    <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80"
+                                        alt="E-Commerce Platform"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-blue-600/80 to-transparent"></div>
                                     <div class="absolute bottom-4 left-4 right-4">
                                         <div class="bg-white/20 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
                                             <p class="text-white text-sm font-medium">E-Commerce Platform</p>
                                         </div>
                                     </div>
-                                    <!-- Decorative circles -->
-                                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"></div>
-                                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full"></div>
                                 </div>
                                 <div class="p-8">
                                     <div class="flex items-center gap-2 mb-3">
@@ -568,18 +650,19 @@
                             </div>
                         </div>
 
-                        <!-- Slide 2 -->
+                        <!-- Slide 2 - FitTrack Elite -->
                         <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-4">
                             <div class="card-hover bg-white rounded-3xl shadow-2xl overflow-hidden shine group">
-                                <div class="relative h-64 bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 overflow-hidden">
-                                    <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1551721434-8b94ddff0e6d?w=800&q=80"
+                                        alt="Fitness Tracking App"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-purple-600/80 to-transparent"></div>
                                     <div class="absolute bottom-4 left-4 right-4">
                                         <div class="bg-white/20 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
                                             <p class="text-white text-sm font-medium">iOS & Android App</p>
                                         </div>
                                     </div>
-                                    <div class="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full"></div>
-                                    <div class="absolute bottom-10 left-10 w-24 h-24 bg-white/10 rounded-full"></div>
                                 </div>
                                 <div class="p-8">
                                     <div class="flex items-center gap-2 mb-3">
@@ -596,17 +679,19 @@
                             </div>
                         </div>
 
-                        <!-- Slide 3 -->
+                        <!-- Slide 3 - CloudSync ERP -->
                         <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-4">
                             <div class="card-hover bg-white rounded-3xl shadow-2xl overflow-hidden shine group">
-                                <div class="relative h-64 bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 overflow-hidden">
-                                    <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+                                        alt="Enterprise ERP System"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-green-600/80 to-transparent"></div>
                                     <div class="absolute bottom-4 left-4 right-4">
                                         <div class="bg-white/20 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
                                             <p class="text-white text-sm font-medium">Cloud-based System</p>
                                         </div>
                                     </div>
-                                    <div class="absolute -top-5 left-1/2 w-40 h-40 bg-white/10 rounded-full"></div>
                                 </div>
                                 <div class="p-8">
                                     <div class="flex items-center gap-2 mb-3">
@@ -623,17 +708,19 @@
                             </div>
                         </div>
 
-                        <!-- Slide 4 -->
+                        <!-- Slide 4 - DesignHub Studio -->
                         <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-4">
                             <div class="card-hover bg-white rounded-3xl shadow-2xl overflow-hidden shine group">
-                                <div class="relative h-64 bg-gradient-to-br from-red-400 via-rose-500 to-pink-600 overflow-hidden">
-                                    <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80"
+                                        alt="UI/UX Design System"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-red-600/80 to-transparent"></div>
                                     <div class="absolute bottom-4 left-4 right-4">
                                         <div class="bg-white/20 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
                                             <p class="text-white text-sm font-medium">Design System</p>
                                         </div>
                                     </div>
-                                    <div class="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                                 </div>
                                 <div class="p-8">
                                     <div class="flex items-center gap-2 mb-3">
@@ -650,17 +737,19 @@
                             </div>
                         </div>
 
-                        <!-- Slide 5 -->
+                        <!-- Slide 5 - MarketPlace 360 -->
                         <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-4">
                             <div class="card-hover bg-white rounded-3xl shadow-2xl overflow-hidden shine group">
-                                <div class="relative h-64 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-600 overflow-hidden">
-                                    <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"
+                                        alt="Multi-vendor Marketplace"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-orange-600/80 to-transparent"></div>
                                     <div class="absolute bottom-4 left-4 right-4">
                                         <div class="bg-white/20 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
                                             <p class="text-white text-sm font-medium">Full-stack Development</p>
                                         </div>
                                     </div>
-                                    <div class="absolute bottom-0 left-0 w-36 h-36 bg-white/10 rounded-full -translate-x-1/2 translate-y-1/2"></div>
                                 </div>
                                 <div class="p-8">
                                     <div class="flex items-center gap-2 mb-3">
@@ -677,17 +766,19 @@
                             </div>
                         </div>
 
-                        <!-- Slide 6 -->
+                        <!-- Slide 6 - SocialConnect+ -->
                         <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-4">
                             <div class="card-hover bg-white rounded-3xl shadow-2xl overflow-hidden shine group">
-                                <div class="relative h-64 bg-gradient-to-br from-pink-400 via-pink-500 to-rose-600 overflow-hidden">
-                                    <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80"
+                                        alt="Social Networking App"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-pink-600/80 to-transparent"></div>
                                     <div class="absolute bottom-4 left-4 right-4">
                                         <div class="bg-white/20 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
                                             <p class="text-white text-sm font-medium">Cross-platform App</p>
                                         </div>
                                     </div>
-                                    <div class="absolute top-1/2 left-1/2 w-44 h-44 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
                                 </div>
                                 <div class="p-8">
                                     <div class="flex items-center gap-2 mb-3">
@@ -724,6 +815,154 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section id="testimonials" class="py-24 px-6 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+
+        <div class="container mx-auto relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <div class="inline-block mb-4">
+                    <!-- <span class="bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wide">Testimonials</span> -->
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">What Our Clients Say</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Don't just take our word for it. Here's what our clients have to say about working with BridgeIn
+                </p>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <!-- Stars Rating -->
+                    <div class="flex space-x-1 mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+
+                    <!-- Quote Icon -->
+                    <div class="text-blue-600 mb-4 opacity-20">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                    </div>
+
+                    <!-- Testimonial Text -->
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "BridgeIn transformed our outdated system into a modern, efficient platform. Their expertise and professionalism exceeded our expectations. Highly recommended!"
+                    </p>
+
+                    <!-- Client Info -->
+                    <div class="flex items-center pt-6 border-t border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-lg mr-4">
+                            JD
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">John Davis</h4>
+                            <p class="text-sm text-gray-500">CEO, TechCorp Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="flex space-x-1 mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+
+                    <div class="text-purple-600 mb-4 opacity-20">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                    </div>
+
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "The mobile app they developed for us is phenomenal! User-friendly, fast, and exactly what we envisioned. The team was responsive and delivered on time."
+                    </p>
+
+                    <div class="flex items-center pt-6 border-t border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white font-bold text-lg mr-4">
+                            SP
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Sarah Peterson</h4>
+                            <p class="text-sm text-gray-500">Founder, FitLife App</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="flex space-x-1 mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+
+                    <div class="text-green-600 mb-4 opacity-20">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                    </div>
+
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "Outstanding work on our ERP system! BridgeIn's team understood our complex requirements and delivered a solution that streamlined our entire operation."
+                    </p>
+
+                    <div class="flex items-center pt-6 border-t border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold text-lg mr-4">
+                            MR
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Michael Rodriguez</h4>
+                            <p class="text-sm text-gray-500">CTO, GlobalSync Ltd</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <!-- Contact Us Section -->
@@ -802,70 +1041,144 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-600 text-white py-14 px-6">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-
-            <!-- Logo & Tagline -->
-            <div>
-                <div class="flex items-center space-x-3 mb-4">
-                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                        <span class="text-blue-600 text-2xl font-extrabold">b</span>
+    <footer class="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-16 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="asset/footer.png" alt="BridgeIn Logo" class="h-12 w-auto">
+                        <!-- <span class="text-3xl font-bold">BridgeIn.</span> -->
                     </div>
-                    <span class="text-3xl font-bold">BridgeIn.</span>
+                    <p class="text-blue-100 font-medium leading-relaxed">Build Better, Faster, and Smarter</p>
+                    <div class="mt-6 flex space-x-3">
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <p class="text-blue-100 font-medium">Build Better, Faster, and Smarter</p>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 relative inline-block">
+                        Quick Links
+                        <span class="absolute bottom-0 left-0 w-12 h-1 bg-white/40 rounded"></span>
+                    </h3>
+                    <ul class="space-y-3 text-blue-100">
+                        <li>
+                            <a href="#" class="flex items-center hover:text-white hover:translate-x-1 transition-all duration-300 group">
+                                <svg class="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services" class="flex items-center hover:text-white hover:translate-x-1 transition-all duration-300 group">
+                                <svg class="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#portfolio" class="flex items-center hover:text-white hover:translate-x-1 transition-all duration-300 group">
+                                <svg class="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="flex items-center hover:text-white hover:translate-x-1 transition-all duration-300 group">
+                                <svg class="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 relative inline-block">
+                        Get in Touch
+                        <span class="absolute bottom-0 left-0 w-12 h-1 bg-white/40 rounded"></span>
+                    </h3>
+                    <ul class="space-y-4 text-blue-100">
+                        <li class="flex items-start group hover:text-white transition-colors">
+                            <svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Surabaya, Indonesia</span>
+                        </li>
+                        <li class="flex items-start group hover:text-white transition-colors">
+                            <svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <a href="mailto:bridgeintechnology@gmail.com" class="hover:underline">bridgeintechnology@gmail.com</a>
+                        </li>
+                        <li class="flex items-start group hover:text-white transition-colors">
+                            <svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <a href="tel:+6285810104055" class="hover:underline">+62-858-1010-4055</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 relative inline-block">
+                        Newsletter
+                        <span class="absolute bottom-0 left-0 w-12 h-1 bg-white/40 rounded"></span>
+                    </h3>
+                    <p class="text-blue-100 mb-4 text-sm leading-relaxed">Subscribe to get the latest updates and news from BridgeIn.</p>
+                    <form class="space-y-3">
+                        <div class="relative">
+                            <input type="email" placeholder="Your email address" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all">
+                        </div>
+                        <button type="submit" class="w-full bg-white text-blue-600 px-4 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 flex items-center justify-center space-x-2 group">
+                            <span>Subscribe</span>
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
             </div>
 
-            <!-- Quick Links -->
-            <div>
-                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                <ul class="space-y-2 text-blue-100">
-                    <li><a href="#" class="hover:text-white transition">Home</a></li>
-                    <li><a href="#services" class="hover:text-white transition">Services</a></li>
-                    <li><a href="#portfolio" class="hover:text-white transition">Portfolio</a></li>
-                    <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
-                </ul>
+            <!-- Bottom Copyright -->
+            <div class="border-t border-white/20 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-blue-100 text-sm">© 2025 BridgeIn. All rights reserved.</p>
+                    <div class="flex space-x-6 text-sm text-blue-100">
+                        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                        <span class="text-blue-300">•</span>
+                        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                        <span class="text-blue-300">•</span>
+                        <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
             </div>
-
-            <!-- Contact Info -->
-            <div>
-                <h3 class="text-lg font-semibold mb-4">Get in Touch</h3>
-                <ul class="space-y-3 text-blue-100">
-                    <li class="flex items-start">
-                        <span class="mr-3">📍</span> Surabaya, Indonesia
-                    </li>
-                    <li class="flex items-start">
-                        <span class="mr-3">✉️</span> bridgeintechnology@gmail.com
-                    </li>
-                    <li class="flex items-start">
-                        <span class="mr-3">📞</span> +62-858-1010-4055
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Social Media -->
-            <div>
-                <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
-                <ul class="space-y-3 text-blue-100">
-                    <li class="flex items-center space-x-3">
-                        <span>📘</span> <a href="#" class="hover:text-white transition">BridgeIn Tech</a>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <span>📸</span> <a href="#" class="hover:text-white transition">@bridgein.tech</a>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <span>▶️</span> <a href="#" class="hover:text-white transition">BridgeIn Tech</a>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <span>✖️</span> <a href="#" class="hover:text-white transition">@bridgein.tech</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Bottom Copyright -->
-        <div class="w-full text-center mt-10 border-t border-blue-400 pt-5">
-            <p class="text-blue-200 text-sm">© 2025 BridgeIn. All rights reserved.</p>
         </div>
     </footer>
 
