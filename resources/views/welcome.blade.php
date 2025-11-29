@@ -17,19 +17,17 @@
 
         @font-face {
             font-family: 'Nexa';
-            src: url('/fonts/Nexa-Regular.woff2') format('woff2'),
-                url('/fonts/Nexa-Regular.woff') format('woff');
-            font-weight: 400;
+            src: url('/fonts/Nexa-ExtraLight.ttf') format('truetype');
+            font-weight: 200;
             font-style: normal;
             font-display: swap;
         }
 
         @font-face {
             font-family: 'Nexa';
-            src: url('/fonts/Nexa-Bold.woff2') format('woff2'),
-                url('/fonts/Nexa-Bold.woff') format('woff');
-            font-weight: 700;
-            font-style: bold;
+            src: url('/fonts/Nexa-Heavy.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
             font-display: swap;
         }
 
