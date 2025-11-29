@@ -99,7 +99,7 @@
                 <!-- Logo -->
                 <a href="#" class="flex items-center group cursor-pointer">
                     <div class="relative">
-                        <img src="asset/logo-crop.png" alt="BridgeIn Logo" class="h-auto w-20 transform group-hover:scale-110 transition-transform duration-300">
+                        <img src="asset/logo-crop.png" alt="BridgeIn Logo" class="h-auto w-28 transform group-hover:scale-110 transition-transform duration-300">
                         <div class="absolute inset-0 bg-blue-500 rounded-xl blur-md opacity-0 group-hover:opacity-30 transition-opacity"></div>
                     </div>
                 </a>
@@ -213,20 +213,24 @@
             <div class="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-blue-800/60 to-purple-900/70"></div>
             <!-- Animated Overlay Pattern -->
             <div class="absolute inset-0 opacity-10">
-                <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+                <div class="absolute top-0 left-0 w-full h-full"
+                    style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;">
+                </div>
             </div>
         </div>
 
+        <!-- CONTENT CONTAINER -->
         <div class="container mx-auto text-center relative z-10">
             <!-- Main Heading with Animation -->
             <div class="space-y-4 mb-8">
                 <h1 class="text-5xl md:text-7xl font-bold leading-tight">
                     <span class="block opacity-0 animate-fade-in-up" style="animation-delay: 0.2s;">Build Better,</span>
-                    <span class="block opacity-0 animate-fade-in-up bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text text-transparent" style="animation-delay: 0.5s;">Faster, and Smarter</span>
+                    <span class="block opacity-0 animate-fade-in-up bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text text-transparent"
+                        style="animation-delay: 0.5s;">Faster, and Smarter</span>
                 </h1>
             </div>
 
-            <!-- Description with Animation -->
+            <!-- Description -->
             <div class="opacity-0 animate-fade-in-up" style="animation-delay: 0.8s;">
                 <p class="text-lg md:text-2xl mb-4 max-w-4xl mx-auto font-light leading-relaxed">
                     BridgeIn is your trusted partner in <span class="font-semibold text-blue-300">Digital Transformation</span>
@@ -237,31 +241,42 @@
             </div>
 
             <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-20 opacity-0 animate-fade-in-up" style="animation-delay: 1.1s;">
-                <a href="#contact" class="group bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-20 opacity-0 animate-fade-in-up"
+                style="animation-delay: 1.1s;">
+                <a href="#contact"
+                    class="group bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
                     <span>Get Started</span>
-                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
                 </a>
-                <a href="#portfolio" class="group bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 hover:border-white/50 transition-all duration-300 flex items-center justify-center space-x-2">
+                <a href="#portfolio"
+                    class="group bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 hover:border-white/50 transition-all duration-300 flex items-center justify-center space-x-2">
                     <span>View Portfolio</span>
-                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
                 </a>
             </div>
 
-            <!-- Values Section with Staggered Animation -->
+            <!-- Values Section -->
             <div class="mt-16 opacity-0 animate-fade-in-up" style="animation-delay: 1.4s;">
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-10 max-w-5xl mx-auto border border-white/20 shadow-2xl">
-                    <h3 class="text-3xl font-bold mb-10 opacity-0 animate-fade-in-up" style="animation-delay: 1.6s;">Our Core Values</h3>
+                <div
+                    class="bg-white/10 backdrop-blur-md rounded-3xl p-10 max-w-5xl mx-auto border border-white/20 shadow-2xl">
+                    <h3 class="text-3xl font-bold mb-10 opacity-0 animate-fade-in-up" style="animation-delay: 1.6s;">
+                        Our Core Values</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <!-- Innovation -->
-                        <div class="flex flex-col items-center group opacity-0 animate-fade-in-up" style="animation-delay: 1.8s;">
-                            <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                        <div class="flex flex-col items-center group opacity-0 animate-fade-in-up"
+                            style="animation-delay: 1.8s;">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                                 <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+                                    <path
+                                        d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
                                 </svg>
                             </div>
                             <h4 class="font-bold text-xl mb-2">Innovation</h4>
@@ -269,40 +284,51 @@
                         </div>
 
                         <!-- Trust & Reliability -->
-                        <div class="flex flex-col items-center group opacity-0 animate-fade-in-up" style="animation-delay: 2s;">
-                            <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                        <div class="flex flex-col items-center group opacity-0 animate-fade-in-up"
+                            style="animation-delay: 2s;">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                                 <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    <path fill-rule="evenodd"
+                                        d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
                                 </svg>
                             </div>
                             <h4 class="font-bold text-xl mb-2">Trust & Reliability</h4>
-                            <p class="text-sm opacity-80 text-center leading-relaxed">Building lasting partnerships through excellence</p>
+                            <p class="text-sm opacity-80 text-center leading-relaxed">Building lasting partnerships through
+                                excellence</p>
                         </div>
 
                         <!-- Modern Solutions -->
-                        <div class="flex flex-col items-center group opacity-0 animate-fade-in-up" style="animation-delay: 2.2s;">
-                            <div class="w-16 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                        <div class="flex flex-col items-center group opacity-0 animate-fade-in-up"
+                            style="animation-delay: 2.2s;">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
                                 <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                                    <path
+                                        d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                                 </svg>
                             </div>
                             <h4 class="font-bold text-xl mb-2">Modern Solutions</h4>
-                            <p class="text-sm opacity-80 text-center leading-relaxed">Leveraging cutting-edge technology</p>
+                            <p class="text-sm opacity-80 text-center leading-relaxed">Leveraging cutting-edge technology
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Scroll Down Indicator -->
-            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 animate-bounce-fade" style="animation-delay: 2.5s;">
-                <div class="flex flex-col items-center space-y-2">
-                    <span class="text-sm font-medium opacity-80">Scroll Down</span>
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 26 26">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                    </svg>
-                </div>
-            </div>
+        </div> <!-- END CONTAINER -->
 
+        <!-- Scroll Down Indicator (dipindahkan ke luar container) -->
+        <div class="absolute bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 animate-bounce-fade z-20"
+            style="animation-delay: 2.5s;">
+            <div class="flex flex-col items-center space-y-2">
+                <span class="text-sm font-medium opacity-80">Scroll Down</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </div>
         </div>
 
         <style>
@@ -340,7 +366,6 @@
                 animation: bounceFade 2s ease-in-out infinite;
             }
 
-            /* Ensure animations play on page load */
             @media (prefers-reduced-motion: reduce) {
 
                 .animate-fade-in-up,
@@ -1061,7 +1086,6 @@
         </div>
     </section>
 
-
     <!-- Contact Us Section -->
     <section id="contact" class="py-20 px-6 bg-white">
         <div class="container mx-auto max-w-4xl">
@@ -1138,13 +1162,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-16 px-6">
+    <footer class="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-16 px-6">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div>
                     <div class="flex items-center space-x-3 mb-4">
                         <img src="asset/footer.png" alt="BridgeIn Logo" class="h-12 w-auto">
-                        <!-- <span class="text-3xl font-bold">BridgeIn.</span> -->
                     </div>
                     <p class="text-blue-100 font-medium leading-relaxed">Build Better, Faster, and Smarter</p>
                     <div class="mt-6 flex space-x-3">
