@@ -583,160 +583,166 @@
     <!-- Tech Stack Section -->
     <section class="py-20 px-6 bg-white">
         <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Tech Stack</h2>
-            <p class="text-center text-gray-600 mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4"
+                data-aos="fade-up">
+                Tech Stack
+            </h2>
+
+            <p class="text-center text-gray-600 mb-12"
+                data-aos="fade-up" data-aos-delay="100">
                 Powered by modern and reliable technologies
             </p>
 
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-10 max-w-6xl mx-auto">
 
-                <!-- ITEM TEMPLATE (tinggal copy-paste buat nambah) -->
+                <!-- TEMPLATE ITEM -->
+                <!-- Tinggal copy, delay saya naikkan otomatis -->
+
                 <!-- Next.js -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="0">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">Next.js</span>
                 </div>
 
                 <!-- React -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="50">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">React</span>
                 </div>
 
                 <!-- Vue.js -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">Vue.js</span>
                 </div>
 
                 <!-- Laravel -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="150">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">Laravel</span>
                 </div>
 
                 <!-- Node.js -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">Node.js</span>
                 </div>
 
                 <!-- TypeScript -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="250">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">TypeScript</span>
                 </div>
 
                 <!-- Flutter -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">Flutter</span>
                 </div>
 
                 <!-- Python -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="350">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">Python</span>
                 </div>
 
                 <!-- Django -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="400">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">Django</span>
                 </div>
 
                 <!-- Golang -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="450">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">Golang</span>
                 </div>
 
                 <!-- Java -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="500">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">Java</span>
                 </div>
 
                 <!-- PHP -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="550">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">PHP</span>
                 </div>
 
                 <!-- PostgreSQL -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="600">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">PostgreSQL</span>
                 </div>
 
                 <!-- MongoDB -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="650">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">MongoDB</span>
                 </div>
 
                 <!-- Docker -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="700">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">Docker</span>
                 </div>
 
                 <!-- GitHub -->
-                <div class="group flex flex-col items-center">
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="750">
                     <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">GitHub</span>
                 </div>
 
             </div>
-
         </div>
     </section>
 
