@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         @font-face {
             font-family: 'Nexa';
             src: url('/fonts/Nexa-Regular.woff2') format('woff2'),
@@ -121,6 +125,12 @@
                         </a>
                     </li>
                     <li>
+                        <a href="#testimonials" class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-medium relative group">
+                            Testimonials
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="#contact" class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-medium relative group">
                             Contact
                             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
@@ -128,7 +138,7 @@
                     </li>
                 </ul>
 
-                <!-- CTA Button -->
+                <!-- CTA Button
                 <div class="hidden md:flex items-center space-x-4">
                     <a href="#contact" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center space-x-2">
                         <span>Get Started</span>
@@ -136,7 +146,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </a>
-                </div>
+                </div> -->
 
                 <!-- Mobile Menu Button -->
                 <button class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none" id="mobile-menu-button">
@@ -1069,7 +1079,7 @@
                         </div>
                         <div>
                             <h3 class="font-semibold text-lg mb-1">Email</h3>
-                            <p class="text-gray-600">hello@company.com</p>
+                            <p class="text-gray-600">bridgeintechnology@gmail.com</p>
                         </div>
                     </div>
 
@@ -1081,7 +1091,7 @@
                         </div>
                         <div>
                             <h3 class="font-semibold text-lg mb-1">Phone</h3>
-                            <p class="text-gray-600">+62 123 4567 890</p>
+                            <p class="text-gray-600">+62-858-1010-4055</p>
                         </div>
                     </div>
 
