@@ -544,13 +544,17 @@
     <section class="py-20 px-6 bg-white">
         <div class="container mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Tech Stack</h2>
-            <p class="text-center text-gray-600 mb-12">Powered by modern and reliable technologies</p>
+            <p class="text-center text-gray-600 mb-12">
+                Powered by modern and reliable technologies
+            </p>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-10 max-w-6xl mx-auto items-center">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-10 max-w-6xl mx-auto">
 
+                <!-- ITEM TEMPLATE (tinggal copy-paste buat nambah) -->
                 <!-- Next.js -->
                 <div class="group flex flex-col items-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-xl transition hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">Next.js</span>
@@ -558,7 +562,8 @@
 
                 <!-- React -->
                 <div class="group flex flex-col items-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-xl transition hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">React</span>
@@ -566,7 +571,8 @@
 
                 <!-- Vue.js -->
                 <div class="group flex flex-col items-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-xl transition hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">Vue.js</span>
@@ -574,7 +580,8 @@
 
                 <!-- Laravel -->
                 <div class="group flex flex-col items-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-xl transition hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">Laravel</span>
@@ -582,7 +589,8 @@
 
                 <!-- Node.js -->
                 <div class="group flex flex-col items-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-xl transition hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">Node.js</span>
@@ -590,7 +598,8 @@
 
                 <!-- TypeScript -->
                 <div class="group flex flex-col items-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-xl transition hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">TypeScript</span>
@@ -598,23 +607,100 @@
 
                 <!-- Flutter -->
                 <div class="group flex flex-col items-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-xl transition hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-10 h-10" />
                     </div>
                     <span class="text-sm text-gray-700 mt-2">Flutter</span>
                 </div>
 
-                <!-- Database -->
+                <!-- Python -->
                 <div class="group flex flex-col items-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-xl transition hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-10 h-10" />
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10" />
                     </div>
-                    <span class="text-sm text-gray-700 mt-2">Database</span>
+                    <span class="text-sm text-gray-700 mt-2">Python</span>
+                </div>
+
+                <!-- Django -->
+                <div class="group flex flex-col items-center">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" class="w-10 h-10" />
+                    </div>
+                    <span class="text-sm text-gray-700 mt-2">Django</span>
+                </div>
+
+                <!-- Golang -->
+                <div class="group flex flex-col items-center">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" class="w-10 h-10" />
+                    </div>
+                    <span class="text-sm text-gray-700 mt-2">Golang</span>
+                </div>
+
+                <!-- Java -->
+                <div class="group flex flex-col items-center">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-10 h-10" />
+                    </div>
+                    <span class="text-sm text-gray-700 mt-2">Java</span>
+                </div>
+
+                <!-- PHP -->
+                <div class="group flex flex-col items-center">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-10 h-10" />
+                    </div>
+                    <span class="text-sm text-gray-700 mt-2">PHP</span>
+                </div>
+
+                <!-- PostgreSQL -->
+                <div class="group flex flex-col items-center">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="w-10 h-10" />
+                    </div>
+                    <span class="text-sm text-gray-700 mt-2">PostgreSQL</span>
+                </div>
+
+                <!-- MongoDB -->
+                <div class="group flex flex-col items-center">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-10 h-10" />
+                    </div>
+                    <span class="text-sm text-gray-700 mt-2">MongoDB</span>
+                </div>
+
+                <!-- Docker -->
+                <div class="group flex flex-col items-center">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="w-10 h-10" />
+                    </div>
+                    <span class="text-sm text-gray-700 mt-2">Docker</span>
+                </div>
+
+                <!-- GitHub -->
+                <div class="group flex flex-col items-center">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
+                            shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-10 h-10" />
+                    </div>
+                    <span class="text-sm text-gray-700 mt-2">GitHub</span>
                 </div>
 
             </div>
+
         </div>
     </section>
+
+
     <!-- portfolio -->
     <section id="portfolio" class="py-24 px-6 relative overflow-hidden">
         <!-- Decorative Elements -->
@@ -829,152 +915,137 @@
         </div>
     </section>
 
+    <style>
+        @keyframes marquee-right {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+
     <section id="testimonials" class="py-24 px-6 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
-        <!-- Decorative Elements -->
+        <!-- Background Decoration -->
         <div class="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
         <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
 
         <div class="container mx-auto relative z-10">
             <!-- Header -->
             <div class="text-center mb-16">
-                <div class="inline-block mb-4">
-                </div>
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">What Our Clients Say</h2>
+                <h2 class="text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
                 <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-                    Don't just take our word for it. Here's what our clients have to say about working with BridgeIn
+                    Don't just take our word for it. Here's what our clients say about BridgeIn.
                 </p>
             </div>
 
-            <!-- Testimonials Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <!-- Testimonial 1 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
-                    <!-- Stars Rating -->
-                    <div class="flex space-x-1 mb-4">
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                    </div>
+            <!-- Animation Wrapper -->
+            <div class="overflow-hidden">
+                <div class="flex gap-8 animate-[marquee-right_25s_linear_infinite] w-max">
 
-                    <!-- Quote Icon -->
-                    <div class="text-blue-600 mb-4 opacity-20">
-                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                        </svg>
-                    </div>
-
-                    <!-- Testimonial Text -->
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        "BridgeIn transformed our outdated system into a modern, efficient platform. Their expertise and professionalism exceeded our expectations. Highly recommended!"
-                    </p>
-
-                    <!-- Client Info -->
-                    <div class="flex items-center pt-6 border-t border-gray-100">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-lg mr-4">
-                            JD
+                    <!-- DUPLICATE WRAPPER START -->
+                    <div class="flex gap-8">
+                        <!-- CARD 1 -->
+                        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[340px]">
+                            <div class="flex space-x-1 mb-4">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-700 mb-6">"BridgeIn transformed our outdated system. Highly recommended!"</p>
+                            <div class="flex items-center pt-4 border-t">
+                                <div class="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center mr-4 font-bold">JD</div>
+                                <div>
+                                    <h4 class="font-bold">John Davis</h4>
+                                    <p class="text-sm text-gray-500">CEO, TechCorp</p>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="font-bold text-gray-900">John Davis</h4>
-                            <p class="text-sm text-gray-500">CEO, TechCorp Indonesia</p>
+
+                        <!-- CARD 2 -->
+                        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[340px]">
+                            <div class="flex space-x-1 mb-4">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-700 mb-6">
+                                "The mobile app is phenomenal! Fast and user-friendly."
+                            </p>
+                            <div class="flex items-center pt-4 border-t">
+                                <div class="w-12 h-12 rounded-full bg-purple-500 text-white flex items-center justify-center mr-4 font-bold">SP</div>
+                                <div>
+                                    <h4 class="font-bold">Sarah Peterson</h4>
+                                    <p class="text-sm text-gray-500">Founder, FitLife</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Testimonial 2 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
-                    <div class="flex space-x-1 mb-4">
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                    </div>
-
-                    <div class="text-purple-600 mb-4 opacity-20">
-                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                        </svg>
-                    </div>
-
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        "The mobile app they developed for us is phenomenal! User-friendly, fast, and exactly what we envisioned. The team was responsive and delivered on time."
-                    </p>
-
-                    <div class="flex items-center pt-6 border-t border-gray-100">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white font-bold text-lg mr-4">
-                            SP
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-gray-900">Sarah Peterson</h4>
-                            <p class="text-sm text-gray-500">Founder, FitLife App</p>
+                        <!-- CARD 3 -->
+                        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[340px]">
+                            <div class="flex space-x-1 mb-4">
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                            <p class="text-gray-700 mb-6">
+                                "Excellent communication and top-notch development service."
+                            </p>
+                            <div class="flex items-center pt-4 border-t">
+                                <div class="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 font-bold">RM</div>
+                                <div>
+                                    <h4 class="font-bold">Richard Mendez</h4>
+                                    <p class="text-sm text-gray-500">CTO, SmartWare</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <!-- DUPLICATE WRAPPER END -->
 
-                <!-- Testimonial 3 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
-                    <div class="flex space-x-1 mb-4">
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                    </div>
-
-                    <div class="text-green-600 mb-4 opacity-20">
-                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                        </svg>
-                    </div>
-
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        "Outstanding work on our ERP system! BridgeIn's team understood our complex requirements and delivered a solution that streamlined our entire operation."
-                    </p>
-
-                    <div class="flex items-center pt-6 border-t border-gray-100">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold text-lg mr-4">
-                            MR
+                    <!-- DUPLICATED AGAIN FOR PERFECT LOOP -->
+                    <div class="flex gap-8">
+                        <!-- COPY 1 -->
+                        <div class="bg-white rounded-2xl p-8 shadow-lg min-w-[340px]">
+                            <div class="flex space-x-1 mb-4"><span class="text-yellow-400">★★★★★</span></div>
+                            <p class="text-gray-700 mb-6">"BridgeIn transformed our outdated system. Highly recommended!"</p>
+                            <div class="flex items-center pt-4 border-t">
+                                <div class="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center mr-4 font-bold">JD</div>
+                                <div>
+                                    <h4 class="font-bold">John Davis</h4>
+                                    <p class="text-sm text-gray-500">CEO, TechCorp</p>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="font-bold text-gray-900">Michael Rodriguez</h4>
-                            <p class="text-sm text-gray-500">CTO, GlobalSync Ltd</p>
+
+                        <!-- COPY 2 -->
+                        <div class="bg-white rounded-2xl p-8 shadow-lg min-w-[340px]">
+                            <div class="flex space-x-1 mb-4"><span class="text-yellow-400">★★★★★</span></div>
+                            <p class="text-gray-700 mb-6">"The mobile app is phenomenal! Fast and user-friendly."</p>
+                            <div class="flex items-center pt-4 border-t">
+                                <div class="w-12 h-12 rounded-full bg-purple-500 text-white flex items-center justify-center mr-4 font-bold">SP</div>
+                                <div>
+                                    <h4 class="font-bold">Sarah Peterson</h4>
+                                    <p class="text-sm text-gray-500">Founder, FitLife</p>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- COPY 3 -->
+                        <div class="bg-white rounded-2xl p-8 shadow-lg min-w-[340px]">
+                            <div class="flex space-x-1 mb-4"><span class="text-yellow-400">★★★★★</span></div>
+                            <p class="text-gray-700 mb-6">"Excellent communication and top-notch development service."</p>
+                            <div class="flex items-center pt-4 border-t">
+                                <div class="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 font-bold">RM</div>
+                                <div>
+                                    <h4 class="font-bold">Richard Mendez</h4>
+                                    <p class="text-sm text-gray-500">CTO, SmartWare</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
+
+        </div>
     </section>
+
 
     <!-- Contact Us Section -->
     <section id="contact" class="py-20 px-6 bg-white">
