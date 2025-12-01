@@ -86,6 +86,195 @@
         .shine:hover::before {
             left: 100%;
         }
+
+        /* Slide Animation */
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(100px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .slide-in-left.visible,
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Stagger delay untuk list items */
+        .stagger-1 {
+            transition-delay: 0.1s;
+        }
+
+        .stagger-2 {
+            transition-delay: 0.2s;
+        }
+
+        .stagger-3 {
+            transition-delay: 0.3s;
+        }
+
+        .stagger-4 {
+            transition-delay: 0.4s;
+        }
+
+        /* Image hover effect */
+        .image-wrapper {
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .image-wrapper:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-wrapper img {
+            transition: transform 0.5s ease;
+        }
+
+        .image-wrapper:hover img {
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceFade {
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-bounce-fade {
+            animation: bounceFade 2s ease-in-out infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .animate-fade-in-up,
+            .animate-bounce-fade {
+                animation: none;
+                opacity: 1;
+            }
+        }
+
+        @keyframes marquee-right {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(59, 130, 246, 0.8);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Animated gradient background */
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animated-gradient {
+            background: linear-gradient(-45deg, #1e3a8a, #3b82f6, #8b5cf6, #ec4899);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
     </style>
 </head>
 
@@ -130,7 +319,7 @@
                     </li>
                     <li>
                         <a href="#contact" class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-black relative group">
-                            Contact
+                            Article
                             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
                         </a>
                     </li>
@@ -139,7 +328,7 @@
                 <!-- CTA Button -->
                 <div class="hidden md:flex items-center space-x-4">
                     <a href="#contact" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2.5 rounded-full font-black hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center space-x-2">
-                        <span>Get Started</span>
+                        <span>Contact Us</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
@@ -179,7 +368,7 @@
                     </li>
                     <li>
                         <a href="#contact" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all font-medium">
-                            Contact
+                            Article
                         </a>
                     </li>
                     <li class="pt-2">
@@ -190,16 +379,6 @@
                 </ul>
             </div>
         </div>
-
-        <script>
-            // Mobile menu toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        </script>
     </nav>
 
     <!-- Hero Section -->
@@ -207,115 +386,144 @@
         <!-- Background Image -->
         <div class="absolute inset-0">
             <img src="asset/hero.jpeg" alt="Hero Background" class="w-full h-full object-cover">
-            <!-- Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-blue-800/60 to-purple-900/70"></div>
+            <!-- Enhanced Gradient Overlay -->
+            <div class="absolute inset-0 animated-gradient opacity-80"></div>
             <!-- Animated Overlay Pattern -->
             <div class="absolute inset-0 opacity-10">
                 <div class="absolute top-0 left-0 w-full h-full"
                     style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;">
                 </div>
             </div>
+            <!-- Floating Particles -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute w-96 h-96 bg-blue-500/20 rounded-full blur-3xl -top-48 -left-48 animate-float"></div>
+                <div class="absolute w-96 h-96 bg-purple-500/20 rounded-full blur-3xl -bottom-48 -right-48 animate-float" style="animation-delay: 1s;"></div>
+            </div>
         </div>
 
         <!-- CONTENT CONTAINER -->
         <div class="container mx-auto text-center relative z-10">
             <!-- Main Heading with Animation -->
-            <div class="space-y-4 mb-8">
-                <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-                    <span class="block opacity-0 animate-fade-in-up" style="animation-delay: 0.2s;">Build Better,</span>
-                    <span class="block opacity-0 animate-fade-in-up bg-gradient-to-r from-blue-200 via-white to-purple-200 bg-clip-text text-transparent"
-                        style="animation-delay: 0.5s;">Faster, and Smarter</span>
+            <div class="space-y-6 mb-12">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
+                    <span class="block opacity-0 animate-fade-in-up" style="animation-delay: 0.2s;">
+                        <span class="gradient-text">BridgeIn</span> delivers trusted
+                    </span>
+                    <span class="block opacity-0 animate-fade-in-up text-white" style="animation-delay: 0.5s;">
+                        Web & App Development
+                    </span>
                 </h1>
             </div>
 
             <!-- Description -->
-            <div class="opacity-0 animate-fade-in-up" style="animation-delay: 0.8s;">
-                <p class="text-lg md:text-2xl mb-4 max-w-4xl mx-auto font-light leading-relaxed">
-                    BridgeIn is your trusted partner in <span class="font-semibold text-blue-300">Digital Transformation</span>
+            <div class="opacity-0 animate-fade-in-up max-w-5xl mx-auto" style="animation-delay: 0.8s;">
+                <p class="text-xl md:text-3xl mb-6 font-light leading-relaxed">
+                    <span class="text-blue-300">Bridge your business to customers</span> by building
+                    <span class="font-semibold text-white">reliable</span>,
+                    <span class="font-semibold text-white">intuitive</span>, and
+                    <span class="font-semibold text-white">innovative solutions</span>
                 </p>
-                <p class="text-base md:text-lg mb-8 max-w-3xl mx-auto opacity-90 leading-relaxed">
-                    We deliver cutting-edge software solutions and IT consulting services to help businesses thrive in the digital era
+                <p class="text-base md:text-xl opacity-90 leading-relaxed max-w-3xl mx-auto">
+                    We craft digital experiences tailored to your unique business needs, transforming ideas into powerful applications
                 </p>
             </div>
 
             <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-20 opacity-0 animate-fade-in-up"
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-24 opacity-0 animate-fade-in-up mt-12"
                 style="animation-delay: 1.1s;">
                 <a href="#contact"
-                    class="group bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
-                    <span>Get Started</span>
-                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                    class="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3 animate-pulse-glow">
+                    <span>Start Your Project</span>
+                    <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor"
                         viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
                 </a>
                 <a href="#portfolio"
-                    class="group bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 hover:border-white/50 transition-all duration-300 flex items-center justify-center space-x-2">
-                    <span>View Portfolio</span>
-                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                    class="group glass-morphism text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-3">
+                    <span>View Our Work</span>
+                    <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor"
                         viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                     </svg>
                 </a>
             </div>
 
             <!-- Values Section -->
-            <div class="mt-16 opacity-0 animate-fade-in-up" style="animation-delay: 1.4s;">
-                <div
-                    class="bg-white/10 backdrop-blur-md rounded-3xl p-10 max-w-5xl mx-auto border border-white/20 shadow-2xl">
-                    <h3 class="text-3xl font-bold mb-10 opacity-0 animate-fade-in-up" style="animation-delay: 1.6s;">
-                        Our Core Values</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- Innovation -->
-                        <div class="flex flex-col items-center group opacity-0 animate-fade-in-up"
+            <div class="mt-20 opacity-0 animate-fade-in-up" style="animation-delay: 1.4s;">
+                <div class="glass-morphism rounded-3xl p-12 max-w-6xl mx-auto shadow-2xl">
+                    <h3 class="text-4xl font-bold mb-12 opacity-0 animate-fade-in-up gradient-text" style="animation-delay: 1.6s;">
+                        Why Choose BridgeIn?
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                        <!-- Reliable Solutions -->
+                        <div class="flex flex-col items-center group opacity-0 animate-fade-in-up transform hover:scale-105 transition-all duration-300"
                             style="animation-delay: 1.8s;">
-                            <div
-                                class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                                    <path
-                                        d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
-                                </svg>
-                            </div>
-                            <h4 class="font-bold text-xl mb-2">Innovation</h4>
-                            <p class="text-sm opacity-80 text-center leading-relaxed">Pushing boundaries with creative solutions</p>
-                        </div>
-
-                        <!-- Trust & Reliability -->
-                        <div class="flex flex-col items-center group opacity-0 animate-fade-in-up"
-                            style="animation-delay: 2s;">
-                            <div
-                                class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-3xl flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd"
                                         d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clip-rule="evenodd" />
                                 </svg>
                             </div>
-                            <h4 class="font-bold text-xl mb-2">Trust & Reliability</h4>
-                            <p class="text-sm opacity-80 text-center leading-relaxed">Building lasting partnerships through
-                                excellence</p>
+                            <h4 class="font-bold text-2xl mb-3">Reliable</h4>
+                            <p class="text-base opacity-90 text-center leading-relaxed">Rock-solid solutions you can depend on, built with industry best practices</p>
                         </div>
 
-                        <!-- Modern Solutions -->
-                        <div class="flex flex-col items-center group opacity-0 animate-fade-in-up"
-                            style="animation-delay: 2.2s;">
-                            <div
-                                class="w-16 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-2xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                                    <path
-                                        d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                        <!-- Intuitive Design -->
+                        <div class="flex flex-col items-center group opacity-0 animate-fade-in-up transform hover:scale-105 transition-all duration-300"
+                            style="animation-delay: 2s;">
+                            <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-3xl flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
                                 </svg>
                             </div>
-                            <h4 class="font-bold text-xl mb-2">Modern Solutions</h4>
-                            <p class="text-sm opacity-80 text-center leading-relaxed">Leveraging cutting-edge technology
-                            </p>
+                            <h4 class="font-bold text-2xl mb-3">Intuitive</h4>
+                            <p class="text-base opacity-90 text-center leading-relaxed">User-friendly interfaces that delight customers and drive engagement</p>
+                        </div>
+
+                        <!-- Custom Solutions -->
+                        <div class="flex flex-col items-center group opacity-0 animate-fade-in-up transform hover:scale-105 transition-all duration-300"
+                            style="animation-delay: 2.2s;">
+                            <div class="w-20 h-20 bg-gradient-to-br from-pink-400 to-pink-600 rounded-3xl flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+                                </svg>
+                            </div>
+                            <h4 class="font-bold text-2xl mb-3">Tailored Solutions</h4>
+                            <p class="text-base opacity-90 text-center leading-relaxed">Custom-built applications designed specifically for your business goals</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-        </div> <!-- END CONTAINER -->
+            <!-- Trust Indicators -->
+            <div class="mt-16 opacity-0 animate-fade-in-up" style="animation-delay: 2.4s;">
+                <div class="flex flex-wrap justify-center items-center gap-8 text-sm opacity-80">
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>100% Quality Assured</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>On-Time Delivery</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Ongoing Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Scroll Down Indicator (dipindahkan ke luar container) -->
         <div class="absolute bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 animate-bounce-fade z-20"
@@ -328,51 +536,6 @@
                 </svg>
             </div>
         </div>
-
-        <style>
-            @keyframes fadeInUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(30px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            @keyframes bounceFade {
-
-                0%,
-                100% {
-                    opacity: 0;
-                    transform: translateY(-10px);
-                }
-
-                50% {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            .animate-fade-in-up {
-                animation: fadeInUp 0.8s ease-out forwards;
-            }
-
-            .animate-bounce-fade {
-                animation: bounceFade 2s ease-in-out infinite;
-            }
-
-            @media (prefers-reduced-motion: reduce) {
-
-                .animate-fade-in-up,
-                .animate-bounce-fade {
-                    animation: none;
-                    opacity: 1;
-                }
-            }
-        </style>
     </section>
 
     <!-- Services Section -->
@@ -382,195 +545,171 @@
         <div class="absolute bottom-20 left-10 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
 
         <div class="container mx-auto relative z-10">
-            <div class="mb-12" data-aos="fade-down">
+            <div class="mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Our Services</h2>
                 <p class="text-center text-gray-600 max-w-2xl mx-auto">
                     Use a few services or use them all, let the BridgeIn team take care of all of your technology needs.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="max-w-6xl mx-auto space-y-16">
 
                 <!-- Website Development -->
-                <div class="group bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
-                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
-
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Website Development</h3>
-                        <ul class="space-y-3 text-sm">
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>Landing Page</span>
+                <div class="grid md:grid-cols-2 gap-12 items-center" data-section="website">
+                    <div class="slide-in-left">
+                        <h3 class="text-3xl font-bold mb-6 text-gray-900">Website Development</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Kami menyediakan layanan pengembangan website profesional yang disesuaikan dengan kebutuhan bisnis Anda. Dari landing page hingga e-commerce yang kompleks, tim kami siap membantu mewujudkan visi digital Anda.
+                        </p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start gap-3 slide-in-left stagger-1">
+                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Landing Page yang menarik dan konversi tinggi</span>
                             </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>Company Profile</span>
+                            <li class="flex items-start gap-3 slide-in-left stagger-2">
+                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Company Profile dengan desain modern</span>
                             </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>E-Commerce</span>
+                            <li class="flex items-start gap-3 slide-in-left stagger-3">
+                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>E-Commerce platform yang scalable</span>
+                            </li>
+                            <li class="flex items-start gap-3 slide-in-left stagger-4">
+                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>SEO Optimization untuk peringkat terbaik</span>
                             </li>
                         </ul>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 slide-in-right">
+                        <div class="image-wrapper rounded-2xl overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80"
+                                alt="Web Development Workspace"
+                                class="w-full h-48 object-cover">
+                        </div>
+                        <div class="image-wrapper rounded-2xl overflow-hidden shadow-lg mt-8">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
+                                alt="Coding and Web Design"
+                                class="w-full h-48 object-cover">
+                        </div>
                     </div>
                 </div>
 
                 <!-- Mobile Development -->
-                <div class="group bg-gradient-to-br from-purple-600 to-purple-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
-                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
-
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
-                            </svg>
+                <div class="grid md:grid-cols-2 gap-12 items-center mt-20" data-section="mobile">
+                    <!-- Gambar (KIRI) -->
+                    <div class="grid grid-cols-2 gap-4 order-2 md:order-1 slide-in-left">
+                        <div class="image-wrapper rounded-2xl overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80"
+                                alt="Mobile App Development"
+                                class="w-full h-48 object-cover">
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Mobile Development</h3>
-                        <ul class="space-y-3 text-sm">
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>iOS Apps</span>
+                        <div class="image-wrapper rounded-2xl overflow-hidden shadow-lg mt-8">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80"
+                                alt="Cross Platform Mobile Apps"
+                                class="w-full h-48 object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Tulisan (KANAN) -->
+                    <div class="order-1 md:order-2 slide-in-right">
+                        <h3 class="text-3xl font-bold mb-6 text-gray-900">Mobile Development</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Kami mengembangkan aplikasi mobile modern yang cepat, responsif, dan user-friendly untuk berbagai kebutuhan bisnis Anda.
+                        </p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start gap-3 slide-in-right stagger-1">
+                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Aplikasi iOS berkinerja tinggi</span>
                             </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>Android Apps</span>
+
+                            <li class="flex items-start gap-3 slide-in-right stagger-2">
+                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Aplikasi Android modern dan cepat</span>
                             </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>Cross-Platform Apps</span>
+
+                            <li class="flex items-start gap-3 slide-in-right stagger-3">
+                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Cross-Platform (Flutter / React Native)</span>
+                            </li>
+
+                            <li class="flex items-start gap-3 slide-in-right stagger-4">
+                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Sistem Kasir & aplikasi bisnis custom</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- E-Commerce -->
-                <div class="group bg-gradient-to-br from-cyan-600 to-cyan-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
-                    data-aos="fade-up" data-aos-delay="300">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
-                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
+                <div class="grid md:grid-cols-2 gap-12 items-center mt-20" data-section="ecommerce">
+                    <!-- Text Section -->
+                    <div class="slide-in-left">
+                        <h3 class="text-3xl font-bold mb-6 text-gray-900">E-Commerce</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Kami membangun platform e-commerce modern yang cepat, aman, dan mudah digunakan.
+                            Cocok untuk UMKM, brand, atau marketplace berskala besar.
+                        </p>
 
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">E-Commerce</h3>
-                        <ul class="space-y-3 text-sm">
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>Online Store</span>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start gap-3 slide-in-left stagger-1">
+                                <svg class="w-5 h-5 text-cyan-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Toko Online dengan fitur lengkap</span>
                             </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>Payment Integration</span>
+
+                            <li class="flex items-start gap-3 slide-in-left stagger-2">
+                                <svg class="w-5 h-5 text-cyan-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Integrasi Pembayaran (QRIS, VA, e-Wallet)</span>
                             </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>Multi-vendor Platform</span>
+
+                            <li class="flex items-start gap-3 slide-in-left stagger-3">
+                                <svg class="w-5 h-5 text-cyan-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Multi-vendor Marketplace</span>
+                            </li>
+
+                            <li class="flex items-start gap-3 slide-in-left stagger-4">
+                                <svg class="w-5 h-5 text-cyan-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Integrasi ERP & Manajemen Stok</span>
                             </li>
                         </ul>
                     </div>
-                </div>
 
-                <!-- Point of Sales -->
-                <div class="group bg-gradient-to-br from-emerald-600 to-emerald-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-emerald-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
-                    data-aos="fade-up" data-aos-delay="400">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
-                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
-
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path>
-                                <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path>
-                            </svg>
+                    <!-- Image Section -->
+                    <div class="grid grid-cols-2 gap-4 slide-in-right">
+                        <div class="image-wrapper rounded-2xl overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+                                alt="E-Commerce Dashboard"
+                                class="w-full h-48 object-cover">
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Point of Sales</h3>
-                        <ul class="space-y-3 text-sm">
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>Cashier System</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>Inventory Management</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>Sales Analytics</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
 
-                <!-- Digital Marketing -->
-                <div class="group bg-gradient-to-br from-pink-600 to-rose-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-pink-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
-                    data-aos="fade-up" data-aos-delay="500">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
-                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
-
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path>
-                                <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path>
-                            </svg>
+                        <div class="image-wrapper rounded-2xl overflow-hidden shadow-lg mt-8">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"
+                                alt="E-Commerce Product UI"
+                                class="w-full h-48 object-cover">
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Digital Marketing</h3>
-                        <ul class="space-y-3 text-sm">
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>SEO Optimization</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>Social Media Ads</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>Content Marketing</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Enterprise System -->
-                <div class="group bg-gradient-to-br from-indigo-600 to-indigo-700 text-white rounded-3xl p-8 hover:shadow-2xl hover:shadow-indigo-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
-                    data-aos="fade-up" data-aos-delay="600">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
-                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
-
-                    <div class="relative z-10">
-                        <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                                <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Enterprise System</h3>
-                        <ul class="space-y-3 text-sm">
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>ERP System</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>Custom Software</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
-                                <span>Business Reporting</span>
-                            </li>
-                        </ul>
                     </div>
                 </div>
 
@@ -959,18 +1098,6 @@
         </div>
     </section>
 
-    <style>
-        @keyframes marquee-right {
-            0% {
-                transform: translateX(-50%);
-            }
-
-            100% {
-                transform: translateX(0);
-            }
-        }
-    </style>
-
     <section id="testimonials" class="py-24 px-6 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
         <!-- Background Decoration -->
         <div class="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
@@ -1175,22 +1302,22 @@
                     </div>
                     <p class="text-blue-100 font-medium leading-relaxed">Build Better, Faster, and Smarter</p>
                     <div class="mt-6 flex space-x-3">
-                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                        <a href="https://www.instagram.com/bridgein.tech?igsh=MWR5YmtuZG9jNmk2dQ==" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                             </svg>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                        <a href="https://www.instagram.com/bridgein.tech?igsh=MWR5YmtuZG9jNmk2dQ==" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                             </svg>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                        <a href="https://www.instagram.com/bridgein.tech?igsh=MWR5YmtuZG9jNmk2dQ==" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                             </svg>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+                        <a href="https://www.instagram.com/bridgein.tech?igsh=MWR5YmtuZG9jNmk2dQ==" class="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                             </svg>
@@ -1391,6 +1518,41 @@
         duration: 900,
         once: true,
         easing: 'ease-out-quart'
+    });
+
+    // Intersection Observer untuk Slide Animation
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Ambil semua elemen yang perlu di-animasi di dalam section ini
+                const slideElements = entry.target.querySelectorAll('.slide-in-left, .slide-in-right');
+
+                slideElements.forEach(element => {
+                    element.classList.add('visible');
+                });
+
+                // Unobserve setelah animasi dimulai (opsional, hapus jika ingin animasi berulang)
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe semua section
+    document.querySelectorAll('[data-section]').forEach(section => {
+        observer.observe(section);
+    });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
     });
 </script>
 
