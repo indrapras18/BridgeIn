@@ -589,17 +589,15 @@
             </div>
         </div>
 
-        <!-- Video Player - Mobile Friendly -->
-        <div class="absolute bottom-4 right-4 z-20">
-            <div class="backdrop-blur-md bg-gradient-to-br from-blue-600/20 via-cyan-400/20 to-blue-700/20 border border-blue-300/30 rounded-xl p-1 transition-transform duration-300 hover:scale-105">
-                <video autoplay muted loop playsinline class="w-24 h-16 sm:w-32 sm:h-20 md:w-48 md:h-28 rounded-lg object-cover">
-                    <source src="/asset/hero-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="mt-1 text-center">
-                    <p class="text-[8px] sm:text-[10px] md:text-sm font-medium text-white/90">Watch Our Story</p>
-                </div>
-            </div>
+        <!-- YouTube Player - Bottom Right Floating -->
+        <div class="absolute bottom-4 right-4 z-20 w-32 sm:w-40 md:w-48 lg:w-56 aspect-video rounded-lg overflow-hidden shadow-lg">
+            <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/MzEFeIRJ0eQ?autoplay=1&mute=1&loop=1&playlist=MzEFeIRJ0eQ"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen
+                class="rounded-lg object-cover"></iframe>
         </div>
 
         <!-- Scroll Down Indicator -->
