@@ -598,7 +598,7 @@
                     loop
                     playsinline
                     class="w-24 h-16 sm:w-32 sm:h-20 md:w-48 md:h-28 rounded-lg object-cover">
-                    <source src="asset/hero-video.mp4" type="video/mp4">
+                    <source src="/asset/hero-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="mt-1 text-center">
