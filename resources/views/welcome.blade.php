@@ -275,6 +275,60 @@
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
         }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -30px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(-10px);
+                opacity: 0.8;
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
+        }
+
+        .animate-bounce {
+            animation: bounce 2s ease-in-out infinite;
+        }
     </style>
 </head>
 
@@ -327,11 +381,15 @@
 
                 <!-- CTA Button -->
                 <div class="hidden md:flex items-center space-x-4">
-                    <a href="#contact" class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2.5 rounded-full font-black hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center space-x-2">
-                        <span>Contact Us</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    <a href="https://wa.me/6285810104055?text=Halo%20BridgeIn,%20saya%20ingin%20bertanya."
+                        target="_blank"
+                        class="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2.5 rounded-full font-black flex items-center space-x-2 hover:shadow-xl hover:scale-105 transition-all duration-300">
+
+                        <!-- WhatsApp Icon -->
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.52 3.48A11.78 11.78 0 0 0 12 0a11.92 11.92 0 0 0-10.4 17.94L0 24l6.25-1.64A11.93 11.93 0 0 0 12 24a12 12 0 0 0 8.48-20.52ZM12 21.55a9.64 9.64 0 0 1-4.93-1.36l-.35-.21-3.71.97 1-3.61-.23-.37A9.67 9.67 0 1 1 12 21.55Zm5.27-7.27c-.29-.14-1.71-.84-1.98-.93s-.46-.14-.65.14-.75.93-.92 1.12-.34.21-.63.07a7.88 7.88 0 0 1-2.31-1.43 8.73 8.73 0 0 1-1.62-2c-.17-.29 0-.45.13-.59s.29-.34.43-.51a2 2 0 0 0 .29-.48.52.52 0 0 0 0-.51c-.07-.14-.65-1.57-.89-2.15s-.47-.48-.65-.49h-.56a1.08 1.08 0 0 0-.77.36A3.24 3.24 0 0 0 6 9.12a5.61 5.61 0 0 0 1.17 3.12 12.87 12.87 0 0 0 4.94 4.23c.61.26 1.09.42 1.46.54a3.5 3.5 0 0 0 1.61.1 2.64 2.64 0 0 0 1.72-1.21 2.17 2.17 0 0 0 .15-1.21c-.06-.09-.26-.14-.55-.28Z" />
                         </svg>
+                        <span>Contact Us</span>
                     </a>
                 </div>
 
@@ -382,12 +440,14 @@
     </nav>
 
     <!-- Hero Section -->
+
+
     <section class="relative text-white py-32 px-6 overflow-hidden min-h-screen flex items-center">
         <!-- Background Image -->
         <div class="absolute inset-0">
             <img src="asset/hero.jpeg" alt="Hero Background" class="w-full h-full object-cover">
-            <!-- Enhanced Gradient Overlay -->
-            <div class="absolute inset-0 animated-gradient opacity-80"></div>
+            <!-- Enhanced Gradient Overlay with #052698 -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[#052698] via-[#0a3bb8] to-purple-900 opacity-85"></div>
             <!-- Animated Overlay Pattern -->
             <div class="absolute inset-0 opacity-10">
                 <div class="absolute top-0 left-0 w-full h-full"
@@ -396,8 +456,8 @@
             </div>
             <!-- Floating Particles -->
             <div class="absolute inset-0 overflow-hidden">
-                <div class="absolute w-96 h-96 bg-blue-500/20 rounded-full blur-3xl -top-48 -left-48 animate-float"></div>
-                <div class="absolute w-96 h-96 bg-purple-500/20 rounded-full blur-3xl -bottom-48 -right-48 animate-float" style="animation-delay: 1s;"></div>
+                <div class="absolute w-96 h-96 bg-[#052698]/30 rounded-full blur-3xl -top-48 -left-48 animate-float"></div>
+                <div class="absolute w-96 h-96 bg-blue-400/20 rounded-full blur-3xl -bottom-48 -right-48 animate-float" style="animation-delay: 1s;"></div>
             </div>
         </div>
 
@@ -407,9 +467,11 @@
             <div class="space-y-6 mb-12">
                 <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
                     <span class="block opacity-0 animate-fade-in-up" style="animation-delay: 0.2s;">
-                        <span class="gradient-text">BridgeIn</span> delivers trusted
+                        <span class="bg-gradient-to-r from-cyan-300 via-blue-200 to-white bg-clip-text text-transparent drop-shadow-lg">BridgeIn</span>
+                        <span class="text-gray-100">delivers</span>
+                        <span class="text-cyan-300">trusted</span>
                     </span>
-                    <span class="block opacity-0 animate-fade-in-up text-white" style="animation-delay: 0.5s;">
+                    <span class="block opacity-0 animate-fade-in-up bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent" style="animation-delay: 0.5s;">
                         Web & App Development
                     </span>
                 </h1>
@@ -418,13 +480,15 @@
             <!-- Description -->
             <div class="opacity-0 animate-fade-in-up max-w-5xl mx-auto" style="animation-delay: 0.8s;">
                 <p class="text-xl md:text-3xl mb-6 font-light leading-relaxed">
-                    <span class="text-blue-300">Bridge your business to customers</span> by building
-                    <span class="font-semibold text-white">reliable</span>,
-                    <span class="font-semibold text-white">intuitive</span>, and
-                    <span class="font-semibold text-white">innovative solutions</span>
+                    <span class="text-cyan-200 font-medium">Bridge your business to customers</span>
+                    <span class="text-gray-100">by building</span>
+                    <span class="font-semibold text-white drop-shadow-md">reliable</span>,
+                    <span class="font-semibold text-white drop-shadow-md">intuitive</span>, and
+                    <span class="font-semibold text-cyan-300 drop-shadow-md">innovative solutions</span>
                 </p>
-                <p class="text-base md:text-xl opacity-90 leading-relaxed max-w-3xl mx-auto">
-                    We craft digital experiences tailored to your unique business needs, transforming ideas into powerful applications
+                <p class="text-base md:text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto">
+                    We craft <span class="text-cyan-200 font-medium">digital experiences</span> tailored to your unique business needs, transforming
+                    <span class="text-white font-medium">ideas into powerful applications</span>
                 </p>
             </div>
 
@@ -432,7 +496,7 @@
             <div class="flex flex-col sm:flex-row gap-6 justify-center mb-24 opacity-0 animate-fade-in-up mt-12"
                 style="animation-delay: 1.1s;">
                 <a href="#contact"
-                    class="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3 animate-pulse-glow">
+                    class="group bg-gradient-to-r from-[#052698] to-blue-500 text-white px-10 py-5 rounded-full font-bold text-lg hover:shadow-2xl hover:shadow-[#052698]/50 hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3 hover:from-blue-500 hover:to-[#052698]">
                     <span>Start Your Project</span>
                     <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor"
                         viewBox="0 0 24 24">
@@ -441,7 +505,7 @@
                     </svg>
                 </a>
                 <a href="#portfolio"
-                    class="group glass-morphism text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-3">
+                    class="group backdrop-blur-md bg-white/10 border-2 border-white/20 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/20 hover:border-[#052698] transition-all duration-300 flex items-center justify-center space-x-3">
                     <span>View Our Work</span>
                     <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor"
                         viewBox="0 0 24 24">
@@ -453,15 +517,15 @@
 
             <!-- Values Section -->
             <div class="mt-20 opacity-0 animate-fade-in-up" style="animation-delay: 1.4s;">
-                <div class="glass-morphism rounded-3xl p-12 max-w-6xl mx-auto shadow-2xl">
-                    <h3 class="text-4xl font-bold mb-12 opacity-0 animate-fade-in-up gradient-text" style="animation-delay: 1.6s;">
+                <div class="backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl p-12 max-w-6xl mx-auto shadow-2xl">
+                    <h3 class="text-4xl font-bold mb-12 opacity-0 animate-fade-in-up bg-gradient-to-r from-blue-200 via-cyan-200 to-blue-100 bg-clip-text text-transparent" style="animation-delay: 1.6s;">
                         Why Choose BridgeIn?
                     </h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                         <!-- Reliable Solutions -->
                         <div class="flex flex-col items-center group opacity-0 animate-fade-in-up transform hover:scale-105 transition-all duration-300"
                             style="animation-delay: 1.8s;">
-                            <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-3xl flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                            <div class="w-20 h-20 bg-gradient-to-br from-[#052698] to-blue-500 rounded-3xl flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-all duration-300 shadow-xl shadow-[#052698]/50">
                                 <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd"
                                         d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
@@ -475,7 +539,7 @@
                         <!-- Intuitive Design -->
                         <div class="flex flex-col items-center group opacity-0 animate-fade-in-up transform hover:scale-105 transition-all duration-300"
                             style="animation-delay: 2s;">
-                            <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-3xl flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-[#052698] rounded-3xl flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-all duration-300 shadow-xl shadow-blue-400/50">
                                 <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
                                     <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
@@ -488,7 +552,7 @@
                         <!-- Custom Solutions -->
                         <div class="flex flex-col items-center group opacity-0 animate-fade-in-up transform hover:scale-105 transition-all duration-300"
                             style="animation-delay: 2.2s;">
-                            <div class="w-20 h-20 bg-gradient-to-br from-pink-400 to-pink-600 rounded-3xl flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-all duration-300 shadow-xl">
+                            <div class="w-20 h-20 bg-gradient-to-br from-cyan-400 to-[#052698] rounded-3xl flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-all duration-300 shadow-xl shadow-cyan-400/50">
                                 <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
                                 </svg>
@@ -504,19 +568,19 @@
             <div class="mt-16 opacity-0 animate-fade-in-up" style="animation-delay: 2.4s;">
                 <div class="flex flex-wrap justify-center items-center gap-8 text-sm opacity-80">
                     <div class="flex items-center space-x-2">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-5 h-5 text-cyan-300" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
                         <span>100% Quality Assured</span>
                     </div>
                     <div class="flex items-center space-x-2">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-5 h-5 text-cyan-300" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
                         <span>On-Time Delivery</span>
                     </div>
                     <div class="flex items-center space-x-2">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-5 h-5 text-cyan-300" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
                         <span>Ongoing Support</span>
@@ -525,8 +589,8 @@
             </div>
         </div>
 
-        <!-- Scroll Down Indicator (dipindahkan ke luar container) -->
-        <div class="absolute bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 animate-bounce-fade z-20"
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 animate-bounce z-20"
             style="animation-delay: 2.5s;">
             <div class="flex flex-col items-center space-y-2">
                 <span class="text-sm font-medium opacity-80">Scroll Down</span>
@@ -545,9 +609,12 @@
         <div class="absolute bottom-20 left-10 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
 
         <div class="container mx-auto relative z-10">
-            <div class="mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Our Services</h2>
-                <p class="text-center text-gray-600 max-w-2xl mx-auto">
+            <div class="mb-16 fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4"
+                    data-aos="fade-up">
+                    Our Services
+                </h2>
+                <p class="text-center text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
                     Use a few services or use them all, let the BridgeIn team take care of all of your technology needs.
                 </p>
             </div>
@@ -556,165 +623,178 @@
 
                 <!-- Website Development -->
                 <div class="grid md:grid-cols-2 gap-12 items-center" data-section="website">
+
+                    <!-- Content (LEFT) -->
                     <div class="slide-in-left">
                         <h3 class="text-3xl font-bold mb-6 text-gray-900">Website Development</h3>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            Kami menyediakan layanan pengembangan website profesional yang disesuaikan dengan kebutuhan bisnis Anda. Dari landing page hingga e-commerce yang kompleks, tim kami siap membantu mewujudkan visi digital Anda.
+                            We provide professional website development services tailored to your business needs.
+                            From landing pages to complex e-commerce platforms, our team is ready to bring your digital
+                            vision to life.
                         </p>
+
                         <ul class="space-y-3 text-gray-700">
                             <li class="flex items-start gap-3 slide-in-left stagger-1">
                                 <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span>Landing Page yang menarik dan konversi tinggi</span>
+                                <span>Engaging and high-converting landing pages</span>
                             </li>
+
                             <li class="flex items-start gap-3 slide-in-left stagger-2">
                                 <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span>Company Profile dengan desain modern</span>
+                                <span>Modern and well-designed company profile websites</span>
                             </li>
+
                             <li class="flex items-start gap-3 slide-in-left stagger-3">
                                 <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span>E-Commerce platform yang scalable</span>
+                                <span>Scalable and fully featured e-commerce platforms</span>
                             </li>
+
                             <li class="flex items-start gap-3 slide-in-left stagger-4">
                                 <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span>SEO Optimization untuk peringkat terbaik</span>
+                                <span>SEO optimization for higher search engine ranking</span>
                             </li>
                         </ul>
                     </div>
-                    <div class="grid grid-cols-2 gap-4 slide-in-right">
+
+                    <!-- Image (RIGHT) -->
+                    <div class="slide-in-right">
                         <div class="image-wrapper rounded-2xl overflow-hidden shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80"
-                                alt="Web Development Workspace"
-                                class="w-full h-48 object-cover">
-                        </div>
-                        <div class="image-wrapper rounded-2xl overflow-hidden shadow-lg mt-8">
-                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
-                                alt="Coding and Web Design"
-                                class="w-full h-48 object-cover">
+                            <img src="asset/web.png"
+                                alt="Website Development"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
 
                 <!-- Mobile Development -->
                 <div class="grid md:grid-cols-2 gap-12 items-center mt-20" data-section="mobile">
-                    <!-- Gambar (KIRI) -->
-                    <div class="grid grid-cols-2 gap-4 order-2 md:order-1 slide-in-left">
+                    <!-- Image (LEFT) -->
+                    <div class="order-2 md:order-1 slide-in-left">
                         <div class="image-wrapper rounded-2xl overflow-hidden shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80"
-                                alt="Mobile App Development"
-                                class="w-full h-48 object-cover">
-                        </div>
-                        <div class="image-wrapper rounded-2xl overflow-hidden shadow-lg mt-8">
-                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80"
-                                alt="Cross Platform Mobile Apps"
-                                class="w-full h-48 object-cover">
+                            <img src="asset/mobile.png"
+                                alt="Mobile Development"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
 
-                    <!-- Tulisan (KANAN) -->
+                    <!-- Content (RIGHT) -->
                     <div class="order-1 md:order-2 slide-in-right">
                         <h3 class="text-3xl font-bold mb-6 text-gray-900">Mobile Development</h3>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            Kami mengembangkan aplikasi mobile modern yang cepat, responsif, dan user-friendly untuk berbagai kebutuhan bisnis Anda.
+                            We build modern mobile applications that are fast, responsive, and user-friendly to support your business needs.
                         </p>
+
                         <ul class="space-y-3 text-gray-700">
                             <li class="flex items-start gap-3 slide-in-right stagger-1">
-                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
                                 </svg>
-                                <span>Aplikasi iOS berkinerja tinggi</span>
+                                <span>High-performance iOS applications</span>
                             </li>
 
                             <li class="flex items-start gap-3 slide-in-right stagger-2">
-                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
                                 </svg>
-                                <span>Aplikasi Android modern dan cepat</span>
+                                <span>Modern and fast Android applications</span>
                             </li>
 
                             <li class="flex items-start gap-3 slide-in-right stagger-3">
-                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
                                 </svg>
-                                <span>Cross-Platform (Flutter / React Native)</span>
+                                <span>Cross-Platform Apps (Flutter / React Native)</span>
                             </li>
 
                             <li class="flex items-start gap-3 slide-in-right stagger-4">
-                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
                                 </svg>
-                                <span>Sistem Kasir & aplikasi bisnis custom</span>
+                                <span>Custom POS systems & business applications</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- E-Commerce -->
-                <div class="grid md:grid-cols-2 gap-12 items-center mt-20" data-section="ecommerce">
-                    <!-- Text Section -->
+                <!-- E-Commerce Section -->
+                <div class="grid md:grid-cols-2 gap-12 items-center" data-section="E-Commerce">
+                    <!-- Content (LEFT) -->
                     <div class="slide-in-left">
                         <h3 class="text-3xl font-bold mb-6 text-gray-900">E-Commerce</h3>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            Kami membangun platform e-commerce modern yang cepat, aman, dan mudah digunakan.
-                            Cocok untuk UMKM, brand, atau marketplace berskala besar.
+                            We create modern and scalable e-commerce solutions tailored to your business.
+                            From single-brand stores to multi-vendor marketplaces, our platforms are optimized
+                            for speed, security, and seamless user experience.
                         </p>
 
                         <ul class="space-y-3 text-gray-700">
                             <li class="flex items-start gap-3 slide-in-left stagger-1">
-                                <svg class="w-5 h-5 text-cyan-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span>Toko Online dengan fitur lengkap</span>
+                                <span>Fully-featured Online Store with product catalog and checkout</span>
                             </li>
 
                             <li class="flex items-start gap-3 slide-in-left stagger-2">
-                                <svg class="w-5 h-5 text-cyan-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span>Integrasi Pembayaran (QRIS, VA, e-Wallet)</span>
+                                <span>Payment gateway integration (QRIS, e-wallet, virtual accounts)</span>
                             </li>
 
                             <li class="flex items-start gap-3 slide-in-left stagger-3">
-                                <svg class="w-5 h-5 text-cyan-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span>Multi-vendor Marketplace</span>
+                                <span>Multi-vendor marketplace capabilities</span>
                             </li>
 
                             <li class="flex items-start gap-3 slide-in-left stagger-4">
-                                <svg class="w-5 h-5 text-cyan-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span>Integrasi ERP & Manajemen Stok</span>
+                                <span>Inventory and order management with ERP integration</span>
+                            </li>
+
+                            <li class="flex items-start gap-3 slide-in-left stagger-5">
+                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>SEO optimized for better visibility and traffic</span>
                             </li>
                         </ul>
                     </div>
 
-                    <!-- Image Section -->
-                    <div class="grid grid-cols-2 gap-4 slide-in-right">
-                        <div class="image-wrapper rounded-2xl overflow-hidden shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
-                                alt="E-Commerce Dashboard"
-                                class="w-full h-48 object-cover">
-                        </div>
-
-                        <div class="image-wrapper rounded-2xl overflow-hidden shadow-lg mt-8">
-                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"
-                                alt="E-Commerce Product UI"
-                                class="w-full h-48 object-cover">
+                    <!-- Image (RIGHT) -->
+                    <div class="slide-in-right">
+                        <div class="image-wrapper rounded-2xl overflow-hidden">
+                            <img src="asset/e-commerce.png"
+                                alt="E-Commerce Platform"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
 
-            </div>
-        </div>
     </section>
 
     <!-- Tech Stack Section -->
@@ -882,7 +962,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- portfolio -->
     <section id="portfolio" class="py-24 px-6 relative overflow-hidden">
@@ -1444,6 +1523,10 @@
     let itemsPerView = 3;
     let totalItems = 6;
 
+    prevBtn.style.opacity = "0.3";
+    prevBtn.style.cursor = "not-allowed";
+    prevBtn.disabled = true;
+
     function updateItemsPerView() {
         if (window.innerWidth < 768) {
             itemsPerView = 1;
@@ -1499,7 +1582,6 @@
         updateCarousel();
     }
 
-    prevBtn.addEventListener('click', prevSlide);
     nextBtn.addEventListener('click', nextSlide);
     window.addEventListener('resize', updateItemsPerView);
 
@@ -1514,13 +1596,13 @@
     });
 
     updateItemsPerView();
+
     AOS.init({
         duration: 900,
         once: true,
         easing: 'ease-out-quart'
     });
 
-    // Intersection Observer untuk Slide Animation
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -1529,25 +1611,21 @@
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Ambil semua elemen yang perlu di-animasi di dalam section ini
                 const slideElements = entry.target.querySelectorAll('.slide-in-left, .slide-in-right');
 
                 slideElements.forEach(element => {
                     element.classList.add('visible');
                 });
 
-                // Unobserve setelah animasi dimulai (opsional, hapus jika ingin animasi berulang)
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Observe semua section
     document.querySelectorAll('[data-section]').forEach(section => {
         observer.observe(section);
     });
 
-    // Mobile menu toggle
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
