@@ -592,12 +592,7 @@
         <!-- Video Player - Mobile Friendly -->
         <div class="absolute bottom-4 right-4 z-20">
             <div class="backdrop-blur-md bg-gradient-to-br from-blue-600/20 via-cyan-400/20 to-blue-700/20 border border-blue-300/30 rounded-xl p-1 transition-transform duration-300 hover:scale-105">
-                <video
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    class="w-24 h-16 sm:w-32 sm:h-20 md:w-48 md:h-28 rounded-lg object-cover">
+                <video autoplay muted loop playsinline class="w-24 h-16 sm:w-32 sm:h-20 md:w-48 md:h-28 rounded-lg object-cover">
                     <source src="/asset/hero-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
