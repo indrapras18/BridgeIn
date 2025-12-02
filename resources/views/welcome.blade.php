@@ -379,11 +379,11 @@
                     </li>
                 </ul>
 
-                <!-- CTA Button -->
+                <!-- CTA Button - Theme Adjusted -->
                 <div class="hidden md:flex items-center space-x-4">
                     <a href="https://wa.me/6285810104055?text=Halo%20BridgeIn,%20saya%20ingin%20bertanya."
                         target="_blank"
-                        class="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2.5 rounded-full font-black flex items-center space-x-2 hover:shadow-xl hover:scale-105 transition-all duration-300">
+                        class="bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-6 py-2.5 rounded-full font-black flex items-center space-x-2 hover:shadow-xl hover:scale-105 transition-all duration-300">
 
                         <!-- WhatsApp Icon -->
                         <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -430,8 +430,10 @@
                         </a>
                     </li>
                     <li class="pt-2">
-                        <a href="#contact" class="block text-center bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all">
-                            Get Started
+                        <a href="https://wa.me/6285810104055?text=Halo%20BridgeIn,%20saya%20ingin%20bertanya."
+                            target="_blank"
+                            class="block w-full text-center bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-full font-black shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300">
+                            Contact Us
                         </a>
                     </li>
                 </ul>
@@ -440,8 +442,6 @@
     </nav>
 
     <!-- Hero Section -->
-
-
     <section class="relative text-white py-32 px-6 overflow-hidden min-h-screen flex items-center">
         <!-- Background Image -->
         <div class="absolute inset-0">
@@ -589,17 +589,27 @@
             </div>
         </div>
 
-        <!-- Scroll Down Indicator -->
-        <div class="absolute bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 animate-bounce z-20"
-            style="animation-delay: 2.5s;">
-            <div class="flex flex-col items-center space-y-2">
-                <span class="text-sm font-medium opacity-80">Scroll Down</span>
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
+        <!-- Video Player - Mobile Friendly -->
+        <div class="absolute bottom-4 right-4 z-20">
+            <div class="backdrop-blur-md bg-gradient-to-br from-blue-600/20 via-cyan-400/20 to-blue-700/20 border border-blue-300/30 rounded-xl p-1 transition-transform duration-300 hover:scale-105">
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    class="w-24 h-16 sm:w-32 sm:h-20 md:w-48 md:h-28 rounded-lg object-cover">
+                    <source src="asset/hero-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="mt-1 text-center">
+                    <p class="text-[8px] sm:text-[10px] md:text-sm font-medium text-white/90">Watch Our Story</p>
+                </div>
             </div>
         </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-8 sm:bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 animate-bounce z-20"
+            style="animation-delay: 2.5s;">
     </section>
 
     <!-- Services Section -->
@@ -794,7 +804,6 @@
                         </div>
                     </div>
                 </div>
-
     </section>
 
     <!-- Tech Stack Section -->
