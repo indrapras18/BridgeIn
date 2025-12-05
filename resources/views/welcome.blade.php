@@ -15,6 +15,177 @@
             scroll-behavior: smooth;
         }
 
+        .pattern-bg {
+            background: linear-gradient(135deg, #062591 0%, #1e40af 30%, #3b82f6 60%, #60a5fa 100%);
+            background-image:
+                linear-gradient(135deg, #062591 0%, #1e40af 30%, #3b82f6 60%, #60a5fa 100%),
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, .05) 35px, rgba(255, 255, 255, .05) 70px),
+                repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255, 255, 255, .03) 35px, rgba(255, 255, 255, .03) 70px);
+        }
+
+        .swiper-expand {
+            display: flex;
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        .card-expand {
+            flex: 1;
+            min-height: 500px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .card-expand:hover {
+            flex: 1.5;
+        }
+
+        .card-expand img {
+            object-position: center 35%;
+        }
+
+        .gradient-overlay {
+            background: linear-gradient(135deg,
+                    rgba(0, 0, 0, 0.7) 0%,
+                    rgba(0, 0, 0, 0.5) 50%,
+                    rgba(0, 0, 0, 0.6) 100%);
+        }
+
+        .shine-effect {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    transparent 0%,
+                    rgba(255, 255, 255, 0.1) 50%,
+                    transparent 100%);
+            transition: left 0.6s ease;
+        }
+
+        .card-expand:hover .shine-effect {
+            left: 100%;
+        }
+
+        .floating-dots {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .dot-1 {
+            top: 20%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .dot-2 {
+            top: 60%;
+            left: 80%;
+            animation-delay: 1s;
+        }
+
+        .dot-3 {
+            top: 40%;
+            right: 20%;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .title-gradient {
+            background: linear-gradient(135deg, #062591 0%, #1e40af 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .decorative-line {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #062591, #3b82f6);
+            margin: 0 auto;
+            border-radius: 2px;
+            margin-top: 1rem;
+        }
+
+        /* Mobile Carousel Styles */
+        @media (max-width: 1024px) {
+            .swiper-expand {
+                overflow-x: auto;
+                overflow-y: hidden;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                gap: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            .swiper-expand::-webkit-scrollbar {
+                display: none;
+            }
+
+            .card-expand {
+                min-width: 85%;
+                min-height: 420px;
+                scroll-snap-align: center;
+                flex-shrink: 0;
+            }
+
+            .card-expand:hover {
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .card-expand {
+                min-width: 90%;
+                min-height: 380px;
+            }
+        }
+
+        /* Carousel Indicators */
+        .carousel-dots {
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            .carousel-dots {
+                display: flex;
+                justify-content: center;
+                gap: 0.5rem;
+                margin-top: 1.5rem;
+            }
+
+            .carousel-dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.4);
+                transition: all 0.3s ease;
+            }
+
+            .carousel-dot.active {
+                width: 24px;
+                border-radius: 4px;
+                background: white;
+            }
+        }
+
         @font-face {
             font-family: 'Nexa';
             src: url('/fonts/Nexa-ExtraLight.ttf') format('truetype');
@@ -372,7 +543,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-black relative group">
+                        <a href="#Article" class="px-4 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-black relative group">
                             Article
                             <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
                         </a>
@@ -425,7 +596,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all font-medium">
+                        <a href="#Article" class="block px-4 py-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all font-medium">
                             Article
                         </a>
                     </li>
@@ -606,377 +777,419 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 px-6 bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50 relative overflow-hidden">
+    <section id="services" class="py-24 px-6 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
+
         <!-- Decorative Background Elements -->
-        <div class="absolute top-20 right-10 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div class="absolute bottom-20 left-10 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+        <div class="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full mix-blend-multiply blur-3xl opacity-30 animate-pulse"></div>
+        <div class="absolute bottom-20 left-10 w-72 h-72 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full mix-blend-multiply blur-3xl opacity-30 animate-pulse" style="animation-delay:2s;"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-indigo-300 to-purple-300 rounded-full mix-blend-multiply blur-2xl opacity-20"></div>
 
         <div class="container mx-auto relative z-10">
-            <div class="mb-16 fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4"
-                    data-aos="fade-up">
+
+            <!-- Heading -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
                     Our Services
                 </h2>
-                <p class="text-center text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                    Use a few services or use them all, let the BridgeIn team take care of all of your technology needs.
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Use a few services or use them all, let the BridgeIn team take care of all your technology needs.
                 </p>
             </div>
 
-            <div class="max-w-6xl mx-auto space-y-16">
+            <div class="max-w-7xl mx-auto space-y-20">
 
-                <!-- Website Development -->
-                <div class="grid md:grid-cols-2 gap-12 items-center" data-section="website">
+                <!-- ===================================================== -->
+                <!-- WEBSITE DEVELOPMENT -->
+                <!-- ===================================================== -->
+                <div class="grid md:grid-cols-2 gap-16 items-center" data-section="website">
 
-                    <!-- Content (LEFT) -->
-                    <div class="slide-in-left">
-                        <h3 class="text-3xl font-bold mb-6 text-gray-900">Website Development</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
+                    <!-- Text -->
+                    <div class="slide-in-left" data-aos="fade-right" data-aos-delay="0">
+                        <h3 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 transition-colors duration-300">
+                            Website Development
+                        </h3>
+
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
                             We provide professional website development services tailored to your business needs.
-                            From landing pages to complex e-commerce platforms, our team is ready to bring your digital
-                            vision to life.
+                            From landing pages to complex e-commerce platforms, our team is ready to bring your digital vision to life.
                         </p>
 
-                        <ul class="space-y-3 text-gray-700">
-                            <li class="flex items-start gap-3 slide-in-left stagger-1">
-                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
+                        <ul class="space-y-4 text-gray-700">
+
+                            <!-- Item -->
+                            <li class="flex items-start gap-4 group" data-aos="fade-up" data-aos-delay="100">
+                                <div class="w-6 h-6 flex-shrink-0 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition">
+                                    <svg class="w-4 h-4 text-blue-600 group-hover:text-white transition" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.7-9.3a1 1 0 0 0-1.4-1.4L9 10.6 7.7 9.3a1 1 0 0 0-1.4 1.4l2 2a1 1 0 0 0 1.4 0l4-4z" />
+                                    </svg>
+                                </div>
                                 <span>Engaging and high-converting landing pages</span>
                             </li>
 
-                            <li class="flex items-start gap-3 slide-in-left stagger-2">
-                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
+                            <!-- Item -->
+                            <li class="flex items-start gap-4 group" data-aos="fade-up" data-aos-delay="200">
+                                <div class="w-6 h-6 flex-shrink-0 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition">
+                                    <svg class="w-4 h-4 text-blue-600 group-hover:text-white transition" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.7-9.3a1 1 0 0 0-1.4-1.4L9 10.6 7.7 9.3a1 1 0 0 0-1.4 1.4l2 2a1 1 0 0 0 1.4 0l4-4z" />
+                                    </svg>
+                                </div>
                                 <span>Modern and well-designed company profile websites</span>
                             </li>
 
-                            <li class="flex items-start gap-3 slide-in-left stagger-3">
-                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
+                            <!-- Item -->
+                            <li class="flex items-start gap-4 group" data-aos="fade-up" data-aos-delay="300">
+                                <div class="w-6 h-6 flex-shrink-0 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition">
+                                    <svg class="w-4 h-4 text-blue-600 group-hover:text-white transition" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.7-9.3a1 1 0 0 0-1.4-1.4L9 10.6 7.7 9.3a1 1 0 0 0-1.4 1.4l2 2a1 1 0 0 0 1.4 0l4-4z" />
+                                    </svg>
+                                </div>
                                 <span>Scalable and fully featured e-commerce platforms</span>
                             </li>
 
-                            <li class="flex items-start gap-3 slide-in-left stagger-4">
-                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
+                            <!-- Item -->
+                            <li class="flex items-start gap-4 group" data-aos="fade-up" data-aos-delay="400">
+                                <div class="w-6 h-6 flex-shrink-0 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition">
+                                    <svg class="w-4 h-4 text-blue-600 group-hover:text-white transition" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.7-9.3a1 1 0 0 0-1.4-1.4L9 10.6 7.7 9.3a1 1 0 0 0-1.4 1.4l2 2a1 1 0 0 0 1.4 0l4-4z" />
+                                    </svg>
+                                </div>
                                 <span>SEO optimization for higher search engine ranking</span>
                             </li>
+
                         </ul>
                     </div>
 
-                    <!-- Image (RIGHT) -->
-                    <div class="slide-in-right">
-                        <div class="image-wrapper rounded-2xl overflow-hidden shadow-lg">
-                            <img src="asset/web.png"
-                                alt="Website Development"
-                                class="w-full h-full object-cover">
+                    <!-- Image -->
+                    <div class="slide-in-right" data-aos="fade-left" data-aos-delay="200">
+                        <div class="image-wrapper rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-blue-500/30 transition-all duration-700 hover:scale-105 border border-white/50 hover:border-blue-300/50">
+                            <img src="asset/web.png" alt="Website Development" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         </div>
                     </div>
                 </div>
 
-                <!-- Mobile Development -->
-                <div class="grid md:grid-cols-2 gap-12 items-center mt-20" data-section="mobile">
-                    <!-- Image (LEFT) -->
-                    <div class="order-2 md:order-1 slide-in-left">
-                        <div class="image-wrapper rounded-2xl overflow-hidden shadow-lg">
-                            <img src="asset/mobile.png"
-                                alt="Mobile Development"
-                                class="w-full h-full object-cover">
+                <!-- ===================================================== -->
+                <!-- MOBILE DEVELOPMENT -->
+                <!-- ===================================================== -->
+                <div class="grid md:grid-cols-2 gap-16 items-center" data-section="mobile">
+
+                    <!-- Image -->
+                    <div class="order-2 md:order-1 slide-in-left" data-aos="fade-right" data-aos-delay="400">
+                        <div class="image-wrapper rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-purple-500/30 transition-all duration-700 hover:scale-105 border border-white/50 hover:border-purple-300/50">
+                            <img src="asset/mobile.png" alt="Mobile Development" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         </div>
                     </div>
 
-                    <!-- Content (RIGHT) -->
-                    <div class="order-1 md:order-2 slide-in-right">
-                        <h3 class="text-3xl font-bold mb-6 text-gray-900">Mobile Development</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
+                    <!-- Text -->
+                    <div class="order-1 md:order-2 slide-in-right" data-aos="fade-left" data-aos-delay="600">
+                        <h3 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Mobile Development</h3>
+
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
                             We build modern mobile applications that are fast, responsive, and user-friendly to support your business needs.
                         </p>
 
-                        <ul class="space-y-3 text-gray-700">
-                            <li class="flex items-start gap-3 slide-in-right stagger-1">
-                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd" />
-                                </svg>
+                        <ul class="space-y-4 text-gray-700">
+
+                            <li class="flex items-start gap-4 group" data-aos="fade-up" data-aos-delay="700">
+                                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-purple-600 transition">
+                                    <svg class="w-4 h-4 text-purple-600 group-hover:text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.7-9.3a1 1 0 0 0-1.4-1.4L9 10.6 7.7 9.3a1 1 0 0 0-1.4 1.4l2 2a1 1 0 0 0 1.4 0l4-4z" />
+                                    </svg>
+                                </div>
                                 <span>High-performance iOS applications</span>
                             </li>
 
-                            <li class="flex items-start gap-3 slide-in-right stagger-2">
-                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd" />
-                                </svg>
+                            <li class="flex items-start gap-4 group" data-aos="fade-up" data-aos-delay="800">
+                                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-purple-600 transition">
+                                    <svg class="w-4 h-4 text-purple-600 group-hover:text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.7-9.3a1 1 0 0 0-1.4-1.4L9 10.6 7.7 9.3a1 1 0 0 0-1.4 1.4l2 2a1 1 0 0 0 1.4 0l4-4z" />
+                                    </svg>
+                                </div>
                                 <span>Modern and fast Android applications</span>
                             </li>
 
-                            <li class="flex items-start gap-3 slide-in-right stagger-3">
-                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd" />
-                                </svg>
+                            <li class="flex items-start gap-4 group" data-aos="fade-up" data-aos-delay="900">
+                                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-purple-600 transition">
+                                    <svg class="w-4 h-4 text-purple-600 group-hover:text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.7-9.3a1 1 0 0 0-1.4-1.4L9 10.6 7.7 9.3a1 1 0 0 0-1.4 1.4l2 2a1 1 0 0 0 1.4 0l4-4z" />
+                                    </svg>
+                                </div>
                                 <span>Cross-Platform Apps (Flutter / React Native)</span>
                             </li>
 
-                            <li class="flex items-start gap-3 slide-in-right stagger-4">
-                                <svg class="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0" fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd" />
-                                </svg>
+                            <li class="flex items-start gap-4 group" data-aos="fade-up" data-aos-delay="1000">
+                                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-purple-600 transition">
+                                    <svg class="w-4 h-4 text-purple-600 group-hover:text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.7-9.3a1 1 0 0 0-1.4-1.4L9 10.6 7.7 9.3a1 1 0 0 0-1.4 1.4l2 2a1 1 0 0 0 1.4 0l4-4z" />
+                                    </svg>
+                                </div>
                                 <span>Custom POS systems & business applications</span>
                             </li>
+
                         </ul>
                     </div>
                 </div>
 
-                <!-- E-Commerce Section -->
-                <div class="grid md:grid-cols-2 gap-12 items-center" data-section="E-Commerce">
-                    <!-- Content (LEFT) -->
-                    <div class="slide-in-left">
-                        <h3 class="text-3xl font-bold mb-6 text-gray-900">E-Commerce</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
+                <!-- ===================================================== -->
+                <!-- E-COMMERCE -->
+                <!-- ===================================================== -->
+                <div class="grid md:grid-cols-2 gap-16 items-center" data-section="ecommerce">
+
+                    <!-- Text -->
+                    <div class="slide-in-left" data-aos="fade-right" data-aos-delay="800">
+                        <h3 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">E-Commerce</h3>
+
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
                             We create modern and scalable e-commerce solutions tailored to your business.
                             From single-brand stores to multi-vendor marketplaces, our platforms are optimized
                             for speed, security, and seamless user experience.
                         </p>
 
-                        <ul class="space-y-3 text-gray-700">
-                            <li class="flex items-start gap-3 slide-in-left stagger-1">
-                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
+                        <ul class="space-y-4 text-gray-700">
+
+                            <li class="flex items-start gap-4 group" data-aos="fade-up" data-aos-delay="900">
+                                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-600 transition">
+                                    <svg class="w-4 h-4 text-green-600 group-hover:text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.7-9.3a1 1 0 0 0-1.4-1.4L9 10.6 7.7 9.3a1 1 0 0 0-1.4 1.4l2 2a1 1 0 0 0 1.4 0l4-4z" />
+                                    </svg>
+                                </div>
                                 <span>Fully-featured Online Store with product catalog and checkout</span>
                             </li>
 
-                            <li class="flex items-start gap-3 slide-in-left stagger-2">
-                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Payment gateway integration (QRIS, e-wallet, virtual accounts)</span>
-                            </li>
-
-                            <li class="flex items-start gap-3 slide-in-left stagger-3">
-                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Multi-vendor marketplace capabilities</span>
-                            </li>
-
-                            <li class="flex items-start gap-3 slide-in-left stagger-4">
-                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Inventory and order management with ERP integration</span>
-                            </li>
-
-                            <li class="flex items-start gap-3 slide-in-left stagger-5">
-                                <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span>SEO optimized for better visibility and traffic</span>
-                            </li>
                         </ul>
                     </div>
 
-                    <!-- Image (RIGHT) -->
-                    <div class="slide-in-right">
-                        <div class="image-wrapper rounded-2xl overflow-hidden">
-                            <img src="asset/e-commerce.png"
-                                alt="E-Commerce Platform"
-                                class="w-full h-full object-cover">
+                    <!-- Image -->
+                    <div class="slide-in-right" data-aos="fade-left" data-aos-delay="1000">
+                        <div class="image-wrapper rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl hover:shadow-green-500/30 transition-all duration-700 hover:scale-105 border border-white/50 hover:border-green-300/50">
+                            <img src="asset/e-commerce.png" alt="E-Commerce Development" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         </div>
                     </div>
-                </div>
-    </section>
-
-    <!-- Tech Stack Section -->
-    <section class="py-20 px-6 bg-white">
-        <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4"
-                data-aos="fade-up">
-                Tech Stack
-            </h2>
-
-            <p class="text-center text-gray-600 mb-12"
-                data-aos="fade-up" data-aos-delay="100">
-                Powered by modern and reliable technologies
-            </p>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-10 max-w-6xl mx-auto">
-
-                <!-- TEMPLATE ITEM -->
-                <!-- Tinggal copy, delay saya naikkan otomatis -->
-
-                <!-- Next.js -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">Next.js</span>
-                </div>
-
-                <!-- React -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="50">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">React</span>
-                </div>
-
-                <!-- Vue.js -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">Vue.js</span>
-                </div>
-
-                <!-- Laravel -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="150">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">Laravel</span>
-                </div>
-
-                <!-- Node.js -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">Node.js</span>
-                </div>
-
-                <!-- TypeScript -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="250">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">TypeScript</span>
-                </div>
-
-                <!-- Flutter -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">Flutter</span>
-                </div>
-
-                <!-- Python -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="350">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">Python</span>
-                </div>
-
-                <!-- Django -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="400">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">Django</span>
-                </div>
-
-                <!-- Golang -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="450">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">Golang</span>
-                </div>
-
-                <!-- Java -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="500">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">Java</span>
-                </div>
-
-                <!-- PHP -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="550">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">PHP</span>
-                </div>
-
-                <!-- PostgreSQL -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="600">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">PostgreSQL</span>
-                </div>
-
-                <!-- MongoDB -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="650">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">MongoDB</span>
-                </div>
-
-                <!-- Docker -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="700">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">Docker</span>
-                </div>
-
-                <!-- GitHub -->
-                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="750">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center 
-                    shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-10 h-10" />
-                    </div>
-                    <span class="text-sm text-gray-700 mt-2">GitHub</span>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- portfolio -->
-    <section id="portfolio" class="py-24 px-6 relative overflow-hidden">
-        <!-- Decorative Elements -->
-        <div class="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div class="absolute bottom-20 right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style="animation-delay: 1s;"></div>
+
+    <!-- Tech Stack Section -->
+    <section class="py-20 px-6 relative overflow-hidden min-h-screen">
+        <!-- BACKGROUND IMAGE -->
+        <div class="absolute inset-0">
+            <img src="asset/hero.jpeg" alt="Hero background showcasing technology" class="w-full h-full object-cover">
+        </div>
+
+        <!-- DARK GRADIENT OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-br from-[#052591]/90 via-[#0a3acb]/85 to-[#052591]/90"></div>
+
+        <!-- SUBTLE PATTERN OVERLAY -->
+        <div class="absolute inset-0 opacity-20 pointer-events-none"
+            style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.2) 1px, transparent 0);
+         background-size: 40px 40px;">
+        </div>
+
+        <!-- CONTENT -->
+        <div class="container mx-auto relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-white"
+                data-aos="fade-up">
+                Tech Stack
+            </h2>
+
+            <p class="text-center text-blue-100 mb-12 text-lg"
+                data-aos="fade-up" data-aos-delay="100">
+                Powered by modern and reliable technologies
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 
+                    gap-8 max-w-7xl mx-auto">
+                <!-- ITEM TEMPLATE -->
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                            alt="Next.js logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">Next.js</span>
+                </div>
+
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="50">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            alt="React logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">React</span>
+                </div>
+
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                            alt="Vue.js logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">Vue.js</span>
+                </div>
+
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="150">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
+                            alt="Laravel logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">Laravel</span>
+                </div>
+
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">Node.js</span>
+                </div>
+
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="250">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                            alt="TypeScript logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">TypeScript</span>
+                </div>
+
+                <!-- Flutter -->
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                            alt="Flutter logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">Flutter</span>
+                </div>
+
+                <!-- Python -->
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="350">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                            alt="Python logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">Python</span>
+                </div>
+
+                <!-- Django -->
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+                            alt="Django logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">Django</span>
+                </div>
+
+                <!-- Golang -->
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="450">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                            alt="Golang logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">Golang</span>
+                </div>
+
+                <!-- Java -->
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                            alt="Java logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">Java</span>
+                </div>
+
+                <!-- PHP -->
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="550">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                            alt="PHP logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">PHP</span>
+                </div>
+
+                <!-- PostgreSQL -->
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                            alt="PostgreSQL logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">PostgreSQL</span>
+                </div>
+
+                <!-- MongoDB -->
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="650">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                            alt="MongoDB logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">MongoDB</span>
+                </div>
+
+                <!-- Docker -->
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="700">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                            alt="Docker logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">Docker</span>
+                </div>
+
+                <!-- GitHub -->
+                <div class="group flex flex-col items-center" data-aos="fade-up" data-aos-delay="750">
+                    <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center 
+                    shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/50 transition-all duration-500 
+                    group-hover:-translate-y-2 group-hover:scale-110 border border-white/10 group-hover:border-white/30">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                            alt="GitHub logo" class="w-12 h-12 group-hover:brightness-110 transition-all duration-300" />
+                    </div>
+                    <span class="text-sm text-blue-100 mt-3 font-medium group-hover:text-white transition-colors duration-300">GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 px-6 relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+        <!-- Enhanced Decorative Elements -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
+        <div class="absolute bottom-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse" style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-indigo-300 to-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20"></div>
 
         <div class="container mx-auto text-center relative z-10">
             <!-- Header -->
-            <div class="mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Our Previous Works</h2>
-                <p class="text-center text-gray-600 mb-2">Discover our portfolio of exceptional projects that showcase</p>
-                <p class="text-center text-gray-600">innovation, quality, and client satisfaction in every detail</p>
+            <div class="mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                    Our Previous Works
+                </h2>
+                <p class="text-center text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                    Discover our portfolio of exceptional projects that showcase innovation, quality, and client satisfaction in every detail.
+                </p>
             </div>
 
             <div class="relative max-w-7xl mx-auto">
@@ -985,28 +1198,28 @@
                     <div id="portfolioCarousel" class="flex transition-transform duration-700 ease-out">
                         <!-- Slide 1 - ShopFlow Pro -->
                         <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-4">
-                            <div class="card-hover bg-white rounded-3xl shadow-2xl overflow-hidden shine group">
+                            <div class="card-hover bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden shine group hover:shadow-3xl hover:shadow-blue-500/40 transition-all duration-700 hover:-translate-y-4 hover:scale-105 border border-white/50 hover:border-blue-300/50" data-aos="fade-up" data-aos-delay="0">
                                 <div class="relative h-64 overflow-hidden">
                                     <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80"
                                         alt="E-Commerce Platform"
                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-blue-600/80 to-transparent"></div>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-blue-600/90 to-transparent"></div>
                                     <div class="absolute bottom-4 left-4 right-4">
-                                        <div class="bg-white/20 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
+                                        <div class="bg-white/30 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
                                             <p class="text-white text-sm font-medium">E-Commerce Platform</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="p-8">
-                                    <div class="flex items-center gap-2 mb-3">
-                                        <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                    <div class="flex items-center gap-2 mb-4">
+                                        <div class="w-3 h-3 bg-blue-600 rounded-full animate-pulse"></div>
                                         <span class="text-blue-600 text-sm font-semibold uppercase tracking-wider">Web Development</span>
                                     </div>
-                                    <h3 class="font-bold text-2xl mb-3 text-gray-800 group-hover:text-blue-600 transition-colors">ShopFlow Pro</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Modern e-commerce solution with advanced inventory management and analytics</p>
-                                    <div class="flex gap-2">
-                                        <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium">React</span>
-                                        <span class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-medium">Node.js</span>
+                                    <h3 class="font-bold text-2xl mb-4 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">ShopFlow Pro</h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Modern e-commerce solution with advanced inventory management and analytics</p>
+                                    <div class="flex gap-2 flex-wrap">
+                                        <span class="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-xs font-medium hover:bg-blue-100 transition-colors">React</span>
+                                        <span class="px-4 py-2 bg-purple-50 text-purple-600 rounded-full text-xs font-medium hover:bg-purple-100 transition-colors">Node.js</span>
                                     </div>
                                 </div>
                             </div>
@@ -1014,28 +1227,28 @@
 
                         <!-- Slide 2 - FitTrack Elite -->
                         <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-4">
-                            <div class="card-hover bg-white rounded-3xl shadow-2xl overflow-hidden shine group">
+                            <div class="card-hover bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden shine group hover:shadow-3xl hover:shadow-purple-500/40 transition-all duration-700 hover:-translate-y-4 hover:scale-105 border border-white/50 hover:border-purple-300/50" data-aos="fade-up" data-aos-delay="150">
                                 <div class="relative h-64 overflow-hidden">
                                     <img src="https://images.unsplash.com/photo-1551721434-8b94ddff0e6d?w=800&q=80"
                                         alt="Fitness Tracking App"
                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-purple-600/80 to-transparent"></div>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-purple-600/90 to-transparent"></div>
                                     <div class="absolute bottom-4 left-4 right-4">
-                                        <div class="bg-white/20 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
+                                        <div class="bg-white/30 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
                                             <p class="text-white text-sm font-medium">iOS & Android App</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="p-8">
-                                    <div class="flex items-center gap-2 mb-3">
-                                        <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                                    <div class="flex items-center gap-2 mb-4">
+                                        <div class="w-3 h-3 bg-purple-600 rounded-full animate-pulse"></div>
                                         <span class="text-purple-600 text-sm font-semibold uppercase tracking-wider">Mobile App</span>
                                     </div>
-                                    <h3 class="font-bold text-2xl mb-3 text-gray-800 group-hover:text-purple-600 transition-colors">FitTrack Elite</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Comprehensive fitness tracking app with AI-powered workout recommendations</p>
-                                    <div class="flex gap-2">
-                                        <span class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-medium">Flutter</span>
-                                        <span class="px-3 py-1 bg-pink-50 text-pink-600 rounded-full text-xs font-medium">Firebase</span>
+                                    <h3 class="font-bold text-2xl mb-4 text-gray-800 group-hover:text-purple-600 transition-colors duration-300">FitTrack Elite</h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Comprehensive fitness tracking app with AI-powered workout recommendations</p>
+                                    <div class="flex gap-2 flex-wrap">
+                                        <span class="px-4 py-2 bg-purple-50 text-purple-600 rounded-full text-xs font-medium hover:bg-purple-100 transition-colors">Flutter</span>
+                                        <span class="px-4 py-2 bg-pink-50 text-pink-600 rounded-full text-xs font-medium hover:bg-pink-100 transition-colors">Firebase</span>
                                     </div>
                                 </div>
                             </div>
@@ -1043,28 +1256,28 @@
 
                         <!-- Slide 3 - CloudSync ERP -->
                         <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-4">
-                            <div class="card-hover bg-white rounded-3xl shadow-2xl overflow-hidden shine group">
+                            <div class="card-hover bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden shine group hover:shadow-3xl hover:shadow-green-500/40 transition-all duration-700 hover:-translate-y-4 hover:scale-105 border border-white/50 hover:border-green-300/50" data-aos="fade-up" data-aos-delay="300">
                                 <div class="relative h-64 overflow-hidden">
                                     <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
                                         alt="Enterprise ERP System"
                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-green-600/80 to-transparent"></div>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-green-600/90 to-transparent"></div>
                                     <div class="absolute bottom-4 left-4 right-4">
-                                        <div class="bg-white/20 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
+                                        <div class="bg-white/30 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
                                             <p class="text-white text-sm font-medium">Cloud-based System</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="p-8">
-                                    <div class="flex items-center gap-2 mb-3">
-                                        <div class="w-2 h-2 bg-green-600 rounded-full"></div>
+                                    <div class="flex items-center gap-2 mb-4">
+                                        <div class="w-3 h-3 bg-green-600 rounded-full animate-pulse"></div>
                                         <span class="text-green-600 text-sm font-semibold uppercase tracking-wider">Enterprise System</span>
                                     </div>
-                                    <h3 class="font-bold text-2xl mb-3 text-gray-800 group-hover:text-green-600 transition-colors">CloudSync ERP</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Enterprise resource planning system with real-time data synchronization</p>
-                                    <div class="flex gap-2">
-                                        <span class="px-3 py-1 bg-green-50 text-green-600 rounded-full text-xs font-medium">Java</span>
-                                        <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium">AWS</span>
+                                    <h3 class="font-bold text-2xl mb-4 text-gray-800 group-hover:text-green-600 transition-colors duration-300">CloudSync ERP</h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Enterprise resource planning system with real-time data synchronization</p>
+                                    <div class="flex gap-2 flex-wrap">
+                                        <span class="px-4 py-2 bg-green-50 text-green-600 rounded-full text-xs font-medium hover:bg-green-100 transition-colors">Java</span>
+                                        <span class="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-xs font-medium hover:bg-blue-100 transition-colors">AWS</span>
                                     </div>
                                 </div>
                             </div>
@@ -1072,28 +1285,28 @@
 
                         <!-- Slide 4 - DesignHub Studio -->
                         <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-4">
-                            <div class="card-hover bg-white rounded-3xl shadow-2xl overflow-hidden shine group">
+                            <div class="card-hover bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden shine group hover:shadow-3xl hover:shadow-red-500/40 transition-all duration-700 hover:-translate-y-4 hover:scale-105 border border-white/50 hover:border-red-300/50" data-aos="fade-up" data-aos-delay="450">
                                 <div class="relative h-64 overflow-hidden">
                                     <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80"
                                         alt="UI/UX Design System"
                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-red-600/80 to-transparent"></div>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-red-600/90 to-transparent"></div>
                                     <div class="absolute bottom-4 left-4 right-4">
-                                        <div class="bg-white/20 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
+                                        <div class="bg-white/30 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
                                             <p class="text-white text-sm font-medium">Design System</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="p-8">
-                                    <div class="flex items-center gap-2 mb-3">
-                                        <div class="w-2 h-2 bg-red-600 rounded-full"></div>
+                                    <div class="flex items-center gap-2 mb-4">
+                                        <div class="w-3 h-3 bg-red-600 rounded-full animate-pulse"></div>
                                         <span class="text-red-600 text-sm font-semibold uppercase tracking-wider">UI/UX Design</span>
                                     </div>
-                                    <h3 class="font-bold text-2xl mb-3 text-gray-800 group-hover:text-red-600 transition-colors">DesignHub Studio</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Complete design system with components library and style guidelines</p>
-                                    <div class="flex gap-2">
-                                        <span class="px-3 py-1 bg-red-50 text-red-600 rounded-full text-xs font-medium">Figma</span>
-                                        <span class="px-3 py-1 bg-orange-50 text-orange-600 rounded-full text-xs font-medium">Sketch</span>
+                                    <h3 class="font-bold text-2xl mb-4 text-gray-800 group-hover:text-red-600 transition-colors duration-300">DesignHub Studio</h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Complete design system with components library and style guidelines</p>
+                                    <div class="flex gap-2 flex-wrap">
+                                        <span class="px-4 py-2 bg-red-50 text-red-600 rounded-full text-xs font-medium hover:bg-red-100 transition-colors">Figma</span>
+                                        <span class="px-4 py-2 bg-orange-50 text-orange-600 rounded-full text-xs font-medium hover:bg-orange-100 transition-colors">Sketch</span>
                                     </div>
                                 </div>
                             </div>
@@ -1101,28 +1314,28 @@
 
                         <!-- Slide 5 - MarketPlace 360 -->
                         <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-4">
-                            <div class="card-hover bg-white rounded-3xl shadow-2xl overflow-hidden shine group">
+                            <div class="card-hover bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden shine group hover:shadow-3xl hover:shadow-orange-500/40 transition-all duration-700 hover:-translate-y-4 hover:scale-105 border border-white/50 hover:border-orange-300/50" data-aos="fade-up" data-aos-delay="600">
                                 <div class="relative h-64 overflow-hidden">
                                     <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"
                                         alt="Multi-vendor Marketplace"
                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-orange-600/80 to-transparent"></div>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-orange-600/90 to-transparent"></div>
                                     <div class="absolute bottom-4 left-4 right-4">
-                                        <div class="bg-white/20 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
+                                        <div class="bg-white/30 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
                                             <p class="text-white text-sm font-medium">Full-stack Development</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="p-8">
-                                    <div class="flex items-center gap-2 mb-3">
-                                        <div class="w-2 h-2 bg-orange-600 rounded-full"></div>
+                                    <div class="flex items-center gap-2 mb-4">
+                                        <div class="w-3 h-3 bg-orange-600 rounded-full animate-pulse"></div>
                                         <span class="text-orange-600 text-sm font-semibold uppercase tracking-wider">E-Commerce</span>
                                     </div>
-                                    <h3 class="font-bold text-2xl mb-3 text-gray-800 group-hover:text-orange-600 transition-colors">MarketPlace 360</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Multi-vendor marketplace with integrated payment and shipping solutions</p>
-                                    <div class="flex gap-2">
-                                        <span class="px-3 py-1 bg-orange-50 text-orange-600 rounded-full text-xs font-medium">Vue.js</span>
-                                        <span class="px-3 py-1 bg-yellow-50 text-yellow-600 rounded-full text-xs font-medium">Laravel</span>
+                                    <h3 class="font-bold text-2xl mb-4 text-gray-800 group-hover:text-orange-600 transition-colors duration-300">MarketPlace 360</h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Multi-vendor marketplace with integrated payment and shipping solutions</p>
+                                    <div class="flex gap-2 flex-wrap">
+                                        <span class="px-4 py-2 bg-orange-50 text-orange-600 rounded-full text-xs font-medium hover:bg-orange-100 transition-colors">Vue.js</span>
+                                        <span class="px-4 py-2 bg-yellow-50 text-yellow-600 rounded-full text-xs font-medium hover:bg-yellow-100 transition-colors">Laravel</span>
                                     </div>
                                 </div>
                             </div>
@@ -1130,28 +1343,28 @@
 
                         <!-- Slide 6 - SocialConnect+ -->
                         <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-4">
-                            <div class="card-hover bg-white rounded-3xl shadow-2xl overflow-hidden shine group">
+                            <div class="card-hover bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden shine group hover:shadow-3xl hover:shadow-pink-500/40 transition-all duration-700 hover:-translate-y-4 hover:scale-105 border border-white/50 hover:border-pink-300/50" data-aos="fade-up" data-aos-delay="750">
                                 <div class="relative h-64 overflow-hidden">
                                     <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80"
                                         alt="Social Networking App"
                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-pink-600/80 to-transparent"></div>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-pink-600/90 to-transparent"></div>
                                     <div class="absolute bottom-4 left-4 right-4">
-                                        <div class="bg-white/20 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-300">
+                                        <div class="bg-white/30 backdrop-blur-md rounded-2xl p-4 transform translate-y-20 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
                                             <p class="text-white text-sm font-medium">Cross-platform App</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="p-8">
-                                    <div class="flex items-center gap-2 mb-3">
-                                        <div class="w-2 h-2 bg-pink-600 rounded-full"></div>
+                                    <div class="flex items-center gap-2 mb-4">
+                                        <div class="w-3 h-3 bg-pink-600 rounded-full animate-pulse"></div>
                                         <span class="text-pink-600 text-sm font-semibold uppercase tracking-wider">Mobile Application</span>
                                     </div>
-                                    <h3 class="font-bold text-2xl mb-3 text-gray-800 group-hover:text-pink-600 transition-colors">SocialConnect+</h3>
-                                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Next-gen social networking platform with real-time messaging and media sharing</p>
-                                    <div class="flex gap-2">
-                                        <span class="px-3 py-1 bg-pink-50 text-pink-600 rounded-full text-xs font-medium">React Native</span>
-                                        <span class="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-xs font-medium">GraphQL</span>
+                                    <h3 class="font-bold text-2xl mb-4 text-gray-800 group-hover:text-pink-600 transition-colors duration-300">SocialConnect+</h3>
+                                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Next-gen social networking platform with real-time messaging and media sharing</p>
+                                    <div class="flex gap-2 flex-wrap">
+                                        <span class="px-4 py-2 bg-pink-50 text-pink-600 rounded-full text-xs font-medium hover:bg-pink-100 transition-colors">React Native</span>
+                                        <span class="px-4 py-2 bg-purple-50 text-purple-600 rounded-full text-xs font-medium hover:bg-purple-100 transition-colors">GraphQL</span>
                                     </div>
                                 </div>
                             </div>
@@ -1160,12 +1373,12 @@
                 </div>
 
                 <!-- Navigation Buttons -->
-                <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 bg-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 rounded-full p-4 shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 z-20 group">
+                <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 bg-white/90 backdrop-blur-sm hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 rounded-full p-4 shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 z-20 group hover:scale-110">
                     <svg class="w-6 h-6 text-gray-800 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
                     </svg>
                 </button>
-                <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 bg-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 rounded-full p-4 shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 z-20 group">
+                <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 bg-white/90 backdrop-blur-sm hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 rounded-full p-4 shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 z-20 group hover:scale-110">
                     <svg class="w-6 h-6 text-gray-800 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
                     </svg>
@@ -1179,73 +1392,230 @@
         </div>
     </section>
 
-    <section id="testimonials" class="py-24 px-6 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
-        <!-- Background Decoration -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+    <section id="Article" class="py-20 px-6 pattern-bg relative overflow-hidden">
+        <!-- Decorative floating elements -->
+        <div class="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/3 w-24 h-24 bg-white/5 rounded-full blur-2xl"></div>
+
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-white mb-2 drop-shadow-lg">Featured Articles</h2>
+                <div class="decorative-line bg-white/80"></div>
+                <p class="text-white/90 mt-6 text-lg drop-shadow">Discover our latest stories and insights</p>
+            </div>
+        </div>
+
+        <div class="swiper-expand">
+            <!-- CARD 1 -->
+            <div class="card-expand bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer shadow-xl hover:shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600"
+                    class="w-full h-full object-cover transition-transform duration-700 scale-105 group-hover:scale-110">
+                <div class="shine-effect"></div>
+                <div class="absolute inset-0 gradient-overlay opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                <div class="floating-dots dot-1"></div>
+                <div class="floating-dots dot-2"></div>
+                <div class="absolute top-6 left-6">
+                    <span class="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-xs font-semibold">TECHNOLOGY</span>
+                </div>
+
+                <div class="absolute bottom-0 left-0 right-0 p-8 transform transition-all duration-500 translate-y-0 group-hover:-translate-y-2">
+                    <div class="w-12 h-1 bg-white/60 mb-4 rounded"></div>
+                    <h3 class="text-white text-3xl font-bold mb-3 leading-tight">Tech & Innovation</h3>
+                    <p class="text-white/90 text-base leading-relaxed">Latest technology insights and digital transformation stories</p>
+                    <div class="mt-4 flex items-center text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span>Read More</span>
+                        <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="absolute top-6 right-6 w-16 h-16 border-t-2 border-r-2 border-white/40 opacity-60 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"></div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card-expand bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer shadow-xl hover:shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                <div class="shine-effect"></div>
+
+                <div class="absolute inset-0 gradient-overlay opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+
+                <div class="floating-dots dot-1"></div>
+                <div class="floating-dots dot-3"></div>
+
+                <div class="absolute top-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-xs font-semibold">LIFESTYLE</span>
+                </div>
+
+                <div class="absolute bottom-0 left-0 right-0 p-8 transform transition-all duration-500 group-hover:-translate-y-2">
+                    <div class="w-12 h-1 bg-white/60 mb-4 rounded opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <h3 class="text-white text-3xl font-bold mb-3 leading-tight">Dahlia Collection</h3>
+                    <p class="text-white/90 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">Elegant floral designs for modern living</p>
+                    <div class="mt-4 flex items-center text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span>Read More</span>
+                        <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="absolute top-6 right-6 w-16 h-16 border-t-2 border-r-2 border-white/40 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"></div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card-expand bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer shadow-xl hover:shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                <div class="shine-effect"></div>
+
+                <div class="absolute inset-0 gradient-overlay opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+
+                <div class="floating-dots dot-2"></div>
+                <div class="floating-dots dot-3"></div>
+
+                <div class="absolute top-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-xs font-semibold">CULINARY</span>
+                </div>
+
+                <div class="absolute bottom-0 left-0 right-0 p-8 transform transition-all duration-500 group-hover:-translate-y-2">
+                    <div class="w-12 h-1 bg-white/60 mb-4 rounded opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <h3 class="text-white text-3xl font-bold mb-3 leading-tight">Noodle House</h3>
+                    <p class="text-white/90 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">Authentic culinary experience and traditional flavors</p>
+                    <div class="mt-4 flex items-center text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span>Read More</span>
+                        <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="absolute top-6 right-6 w-16 h-16 border-t-2 border-r-2 border-white/40 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"></div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="card-expand bg-gray-200 rounded-3xl overflow-hidden relative group cursor-pointer shadow-xl hover:shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                <div class="shine-effect"></div>
+
+                <div class="absolute inset-0 gradient-overlay opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+
+                <div class="floating-dots dot-1"></div>
+                <div class="floating-dots dot-2"></div>
+
+                <div class="absolute top-6 left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-xs font-semibold">SERVICES</span>
+                </div>
+
+                <div class="absolute bottom-0 left-0 right-0 p-8 transform transition-all duration-500 group-hover:-translate-y-2">
+                    <div class="w-12 h-1 bg-white/60 mb-4 rounded opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <h3 class="text-white text-3xl font-bold mb-3 leading-tight">Fresh Laundry</h3>
+                    <p class="text-white/90 text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">Professional care services and premium cleaning</p>
+                    <div class="mt-4 flex items-center text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span>Read More</span>
+                        <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="absolute top-6 right-6 w-16 h-16 border-t-2 border-r-2 border-white/40 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"></div>
+            </div>
+        </div>
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-dots">
+            <div class="carousel-dot active"></div>
+            <div class="carousel-dot"></div>
+            <div class="carousel-dot"></div>
+            <div class="carousel-dot"></div>
+        </div>
+        </div>
+    </section>
+
+    <!-- testi -->
+    <section id="testimonials" class="py-24 px-6 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
+        <!-- Enhanced Background Decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-300 to-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-indigo-300 to-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-cyan-200 to-blue-200 rounded-full mix-blend-multiply filter blur-2xl opacity-20"></div>
 
         <div class="container mx-auto relative z-10">
             <!-- Header -->
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-                    Don't just take our word for it. Here's what our clients say about BridgeIn.
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    What Our Clients Say
+                </h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto mt-4 leading-relaxed">
+                    Don't just take our word for it. Here's what our clients say about BridgeIn's transformative solutions.
                 </p>
             </div>
 
             <!-- Animation Wrapper -->
             <div class="overflow-hidden">
-                <div class="flex gap-8 animate-[marquee-right_25s_linear_infinite] w-max">
-
+                <div class="flex gap-8 animate-[marquee-right_30s_linear_infinite] w-max">
                     <!-- DUPLICATE WRAPPER START -->
                     <div class="flex gap-8">
                         <!-- CARD 1 -->
-                        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[340px]">
-                            <div class="flex space-x-1 mb-4">
-                                <span class="text-yellow-400">★★★★★</span>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-700 hover:-translate-y-3 hover:scale-105 min-w-[380px] border border-white/50 hover:border-blue-300/50 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="0">
+                            <div class="absolute top-4 left-4 text-4xl text-blue-200 opacity-50">"</div>
+                            <div class="flex space-x-1 mb-6 justify-center">
+                                <span class="text-yellow-400 group-hover:text-yellow-500 transition-colors duration-300 text-lg">★★★★★</span>
                             </div>
-                            <p class="text-gray-700 mb-6">"BridgeIn transformed our outdated system. Highly recommended!"</p>
-                            <div class="flex items-center pt-4 border-t">
-                                <div class="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center mr-4 font-bold">JD</div>
-                                <div>
-                                    <h4 class="font-bold">John Davis</h4>
+                            <p class="text-gray-700 mb-8 text-center italic group-hover:text-gray-800 transition-colors duration-300 leading-relaxed">
+                                "BridgeIn transformed our outdated system into a modern powerhouse. Highly recommended for any business!"
+                            </p>
+                            <div class="flex items-center justify-center pt-6 border-t border-gray-200 group-hover:border-blue-300 transition-colors duration-300">
+                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex items-center justify-center mr-6 font-bold text-xl shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">JD</div>
+                                <div class="text-center">
+                                    <h4 class="font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300 text-lg">John Davis</h4>
                                     <p class="text-sm text-gray-500">CEO, TechCorp</p>
                                 </div>
                             </div>
+                            <div class="absolute bottom-4 right-4 text-4xl text-blue-200 opacity-50 rotate-180">"</div>
                         </div>
 
                         <!-- CARD 2 -->
-                        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[340px]">
-                            <div class="flex space-x-1 mb-4">
-                                <span class="text-yellow-400">★★★★★</span>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-700 hover:-translate-y-3 hover:scale-105 min-w-[380px] border border-white/50 hover:border-purple-300/50 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="150">
+                            <div class="absolute top-4 left-4 text-4xl text-purple-200 opacity-50">"</div>
+                            <div class="flex space-x-1 mb-6 justify-center">
+                                <span class="text-yellow-400 group-hover:text-yellow-500 transition-colors duration-300 text-lg">★★★★★</span>
                             </div>
-                            <p class="text-gray-700 mb-6">
-                                "The mobile app is phenomenal! Fast and user-friendly."
+                            <p class="text-gray-700 mb-8 text-center italic group-hover:text-gray-800 transition-colors duration-300 leading-relaxed">
+                                "The mobile app is phenomenal! Fast, user-friendly, and exceeded all our expectations."
                             </p>
-                            <div class="flex items-center pt-4 border-t">
-                                <div class="w-12 h-12 rounded-full bg-purple-500 text-white flex items-center justify-center mr-4 font-bold">SP</div>
-                                <div>
-                                    <h4 class="font-bold">Sarah Peterson</h4>
+                            <div class="flex items-center justify-center pt-6 border-t border-gray-200 group-hover:border-purple-300 transition-colors duration-300">
+                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 text-white flex items-center justify-center mr-6 font-bold text-xl shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">SP</div>
+                                <div class="text-center">
+                                    <h4 class="font-bold text-gray-800 group-hover:text-purple-600 transition-colors duration-300 text-lg">Sarah Peterson</h4>
                                     <p class="text-sm text-gray-500">Founder, FitLife</p>
                                 </div>
                             </div>
+                            <div class="absolute bottom-4 right-4 text-4xl text-purple-200 opacity-50 rotate-180">"</div>
                         </div>
 
                         <!-- CARD 3 -->
-                        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[340px]">
-                            <div class="flex space-x-1 mb-4">
-                                <span class="text-yellow-400">★★★★★</span>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:shadow-green-500/30 transition-all duration-700 hover:-translate-y-3 hover:scale-105 min-w-[380px] border border-white/50 hover:border-green-300/50 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                            <div class="absolute top-4 left-4 text-4xl text-green-200 opacity-50">"</div>
+                            <div class="flex space-x-1 mb-6 justify-center">
+                                <span class="text-yellow-400 group-hover:text-yellow-500 transition-colors duration-300 text-lg">★★★★★</span>
                             </div>
-                            <p class="text-gray-700 mb-6">
-                                "Excellent communication and top-notch development service."
+                            <p class="text-gray-700 mb-8 text-center italic group-hover:text-gray-800 transition-colors duration-300 leading-relaxed">
+                                "Excellent communication and top-notch development service. BridgeIn is our go-to partner."
                             </p>
-                            <div class="flex items-center pt-4 border-t">
-                                <div class="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 font-bold">RM</div>
-                                <div>
-                                    <h4 class="font-bold">Richard Mendez</h4>
+                            <div class="flex items-center justify-center pt-6 border-t border-gray-200 group-hover:border-green-300 transition-colors duration-300">
+                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-green-600 text-white flex items-center justify-center mr-6 font-bold text-xl shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">RM</div>
+                                <div class="text-center">
+                                    <h4 class="font-bold text-gray-800 group-hover:text-green-600 transition-colors duration-300 text-lg">Richard Mendez</h4>
                                     <p class="text-sm text-gray-500">CTO, SmartWare</p>
                                 </div>
                             </div>
+                            <div class="absolute bottom-4 right-4 text-4xl text-green-200 opacity-50 rotate-180">"</div>
                         </div>
                     </div>
                     <!-- DUPLICATE WRAPPER END -->
@@ -1253,48 +1623,64 @@
                     <!-- DUPLICATED AGAIN FOR PERFECT LOOP -->
                     <div class="flex gap-8">
                         <!-- COPY 1 -->
-                        <div class="bg-white rounded-2xl p-8 shadow-lg min-w-[340px]">
-                            <div class="flex space-x-1 mb-4"><span class="text-yellow-400">★★★★★</span></div>
-                            <p class="text-gray-700 mb-6">"BridgeIn transformed our outdated system. Highly recommended!"</p>
-                            <div class="flex items-center pt-4 border-t">
-                                <div class="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center mr-4 font-bold">JD</div>
-                                <div>
-                                    <h4 class="font-bold">John Davis</h4>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-700 hover:-translate-y-3 hover:scale-105 min-w-[380px] border border-white/50 hover:border-blue-300/50 group relative overflow-hidden">
+                            <div class="absolute top-4 left-4 text-4xl text-blue-200 opacity-50">"</div>
+                            <div class="flex space-x-1 mb-6 justify-center">
+                                <span class="text-yellow-400 group-hover:text-yellow-500 transition-colors duration-300 text-lg">★★★★★</span>
+                            </div>
+                            <p class="text-gray-700 mb-8 text-center italic group-hover:text-gray-800 transition-colors duration-300 leading-relaxed">
+                                "BridgeIn transformed our outdated system into a modern powerhouse. Highly recommended for any business!"
+                            </p>
+                            <div class="flex items-center justify-center pt-6 border-t border-gray-200 group-hover:border-blue-300 transition-colors duration-300">
+                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white flex items-center justify-center mr-6 font-bold text-xl shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">JD</div>
+                                <div class="text-center">
+                                    <h4 class="font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300 text-lg">John Davis</h4>
                                     <p class="text-sm text-gray-500">CEO, TechCorp</p>
                                 </div>
                             </div>
+                            <div class="absolute bottom-4 right-4 text-4xl text-blue-200 opacity-50 rotate-180">"</div>
                         </div>
 
                         <!-- COPY 2 -->
-                        <div class="bg-white rounded-2xl p-8 shadow-lg min-w-[340px]">
-                            <div class="flex space-x-1 mb-4"><span class="text-yellow-400">★★★★★</span></div>
-                            <p class="text-gray-700 mb-6">"The mobile app is phenomenal! Fast and user-friendly."</p>
-                            <div class="flex items-center pt-4 border-t">
-                                <div class="w-12 h-12 rounded-full bg-purple-500 text-white flex items-center justify-center mr-4 font-bold">SP</div>
-                                <div>
-                                    <h4 class="font-bold">Sarah Peterson</h4>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-700 hover:-translate-y-3 hover:scale-105 min-w-[380px] border border-white/50 hover:border-purple-300/50 group relative overflow-hidden">
+                            <div class="absolute top-4 left-4 text-4xl text-purple-200 opacity-50">"</div>
+                            <div class="flex space-x-1 mb-6 justify-center">
+                                <span class="text-yellow-400 group-hover:text-yellow-500 transition-colors duration-300 text-lg">★★★★★</span>
+                            </div>
+                            <p class="text-gray-700 mb-8 text-center italic group-hover:text-gray-800 transition-colors duration-300 leading-relaxed">
+                                "The mobile app is phenomenal! Fast, user-friendly, and exceeded all our expectations."
+                            </p>
+                            <div class="flex items-center justify-center pt-6 border-t border-gray-200 group-hover:border-purple-300 transition-colors duration-300">
+                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 text-white flex items-center justify-center mr-6 font-bold text-xl shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">SP</div>
+                                <div class="text-center">
+                                    <h4 class="font-bold text-gray-800 group-hover:text-purple-600 transition-colors duration-300 text-lg">Sarah Peterson</h4>
                                     <p class="text-sm text-gray-500">Founder, FitLife</p>
                                 </div>
                             </div>
+                            <div class="absolute bottom-4 right-4 text-4xl text-purple-200 opacity-50 rotate-180">"</div>
                         </div>
 
                         <!-- COPY 3 -->
-                        <div class="bg-white rounded-2xl p-8 shadow-lg min-w-[340px]">
-                            <div class="flex space-x-1 mb-4"><span class="text-yellow-400">★★★★★</span></div>
-                            <p class="text-gray-700 mb-6">"Excellent communication and top-notch development service."</p>
-                            <div class="flex items-center pt-4 border-t">
-                                <div class="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 font-bold">RM</div>
-                                <div>
-                                    <h4 class="font-bold">Richard Mendez</h4>
+                        <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:shadow-green-500/30 transition-all duration-700 hover:-translate-y-3 hover:scale-105 min-w-[380px] border border-white/50 hover:border-green-300/50 group relative overflow-hidden">
+                            <div class="absolute top-4 left-4 text-4xl text-green-200 opacity-50">"</div>
+                            <div class="flex space-x-1 mb-6 justify-center">
+                                <span class="text-yellow-400 group-hover:text-yellow-500 transition-colors duration-300 text-lg">★★★★★</span>
+                            </div>
+                            <p class="text-gray-700 mb-8 text-center italic group-hover:text-gray-800 transition-colors duration-300 leading-relaxed">
+                                "Excellent communication and top-notch development service. BridgeIn is our go-to partner."
+                            </p>
+                            <div class="flex items-center justify-center pt-6 border-t border-gray-200 group-hover:border-green-300 transition-colors duration-300">
+                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-green-600 text-white flex items-center justify-center mr-6 font-bold text-xl shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">RM</div>
+                                <div class="text-center">
+                                    <h4 class="font-bold text-gray-800 group-hover:text-green-600 transition-colors duration-300 text-lg">Richard Mendez</h4>
                                     <p class="text-sm text-gray-500">CTO, SmartWare</p>
                                 </div>
                             </div>
+                            <div class="absolute bottom-4 right-4 text-4xl text-green-200 opacity-50 rotate-180">"</div>
                         </div>
-
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
